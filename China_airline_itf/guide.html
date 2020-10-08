@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149919035-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149919035-1', {'page_title': 'terms_conditions'});
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
+  <!-- facebook share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="⭐華航線上旅展⭐買機票抽百萬豪哩" />
+  <meta property="og:description" content="全航線促銷優惠中" />
+  <meta property="og:image" content="https://2019itfchinaairlines.com.tw/img/fb_share.jpg" />
+  <meta property="og:url" content="https://2019itfchinaairlines.com.tw/" />
+  <!-- favicon -->
+  <link rel="icon" href="img/favicon.ico">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/index.js?1570635412867"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/m_css_layout.css">
+  <title>⭐華航線上旅展⭐買機票抽百萬豪哩</title>
+
+</head>
+<body>
+<div class="wrapper guidewrap" id="app">
+  <header>
+    <a href="/" class="logo" onclick="gtag('event', 'index_logo',{'event_label' : '首頁-左上角選單按鈕'})">
+      <img src="img/svg/logo.svg" alt="">
+      <img src="img/svg/logo02.svg" alt="" class="m_logo">
+    </a>
+    <div class="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul class="menu">
+        <li><a href="index.html#million" onclick="gtag('event', 'navigation_ticket',{'event_label' : '  百萬豪哩遊世界'})">百萬豪哩遊世界</a></li>
+        <li><a href="index.html#gacha" onclick="gtag('event', 'navigation_lottery',{'event_label' : '  會員扭扭樂'})">會員扭扭樂</a></li>
+        <li><a href="index.html#waypoint" onclick="gtag('event', 'navigation_promotion',{'event_label' : '優惠機票'})">優惠機票</a></li>
+        <li><a href="index.html#group" onclick="gtag('event', 'navigation_group',{'event_label' : '團體享好康'})">團體享好康</a></li>
+        <li><a href="guide.html" onclick="gtag('event', 'navigation_terms_conditions',{'event_label' : '活動辦法'})">活動辦法</a></li>
+        <li><a href="award.html" onclick="gtag('event', 'navigation_award',{'event_label' : '得獎名單'})">得獎名單</a></li>
+        <!-- <li><a href="" onclick="gtag('event', 'navigation_program_list',{'event_label' : '旅展活動時間表'})">旅展活動時間表</a></li> -->
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </header>
+  <section class="guide">
+    <h2><img src="img/kv_title.png" alt=""></h2>
+    <div class="guide_tabarea">
+      <div class="guide_tab guide_tab1" :class="{'guide_tab_active': guide=='guide1'}" @click="guide1">
+        百萬豪哩遊世界
+      </div>
+      <div class="guide_tab guide_tab2" :class="{'guide_tab_active': guide=='guide2'}" @click="guide2">
+        團體享好康
+      </div>
+    </div>
+    <div class="guide1" v-if="guide == 'guide1'">
+      <div class="guide_title">
+        <img src="img/svg/note_title01.svg" alt="">
+      </div>
+      <div class="block">
+        <h3>活動辦法</h3>
+        <h4>•「百萬豪哩遊世界」抽獎活動</h4>
+        <p>凡在 2019/10/18 09:00~2019/11/22 18:00期間，購買台灣地區出發之中華航空/華信航空國際線自營航班個人機票(含華航官網或旅行社購票，嬰兒票不適用)，並於2019/11/22 18:00前至本活動網頁完成登錄，即可享有「百萬豪哩遊世界」抽獎活動之抽獎資格。</p>
+        <div class="notice">
+          *註: 
+          <ul>
+            <li>華夏會員卡資料登記之英文姓名必須與活動期間內購買機票之英文姓名相符，始可符合抽獎資格條件。</li>
+            <li>團體機票、船員/勞工票、嬰兒票、員工同業折扣票、聯營航空機票、會員哩程免費換票、包機機票、員工優待機票、非中華航空/華信航空為承載航空公司不列入以上活動之機票資格。</li>
+            <li>聯票號碼以第一張機票號碼為主登錄。</li>
+          </ul>
+        </div>
+        <h4>•「會員扭扭樂」立即抽活動</h4>
+        <p>凡在2019/10/18 09:00~2019/11/22 18:00期間，至本活動網頁登錄華夏會員資料，即可參加「會員扭扭樂」抽獎活動。每個會員帳號限登錄一次。</p>
+      </div>
+      <div class="block">
+        <h3>抽獎獎項</h3>
+        <h4>•「百萬豪哩遊世界」活動獎項</h4>
+        <div class="prize_area">
+          <div class="prize_item prize_item1">
+            <img src="img/prize.png" alt="">
+            <p class="title">首<br><br>獎</p>
+            <p><b>50</b>萬哩程　共<span class="num">1</span>名</p>
+          </div>
+          <div class="prize_item prize_item2">
+            <img src="img/prize.png" alt="">
+            <p class="title">二<br><br>獎</p>
+            <p><b>30</b>萬哩程　共<span class="num">2</span>名</p>
+          </div>
+        </div>
+        <h4>•「會員扭扭樂」立即抽活動獎項</h4>
+        <div class="prize_area">
+          <div class="prize_item prize_item3">
+            <img src="img/prize.png" alt="">
+            <p class="title">首<br><br>獎</p>
+            <p><b>6000</b>哩程　共<span class="num">4</span>名</p>
+          </div>
+          <div class="prize_item prize_item4">
+            <img src="img/prize.png" alt="">
+            <p class="title">二<br><br>獎</p>
+            <p><b>600</b>哩程 共<span class="num">240</span>名</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>獎項說明</h3>
+        <ul>
+          <li>得獎者皆須為中華航空華夏會員。</li>
+          <li>哩程得獎者在得獎名單公告後，經核對會員資料正確後，約需8周作業時間，即可將獲贈哩程存入會員帳戶（若得獎金額超過新台幣20,000元整，需先完成預繳10%中獎所得稅後起算8周作業時間）。</li>
+          <li>本次贈獎哩程數有效期限為12個月，自存入當日起始計算，其他哩程使用方式以本公司華夏會員相關使用規範為準。</li>
+          <li>參加本抽獎活動所獲得之哩程，皆為優惠哩程(Bonus Miles)，無法作為會員卡籍晉升及續卡依據。</li>
+          <li>抽獎人（參加活動者）限中華民國國民，得獎者如為限制行為能力人、受輔助宣告或無行為能力人者(如未成年者等)，於兌換獎項時應檢附其為限制行為能力人、受輔助宣告或無行為能力人之相關證明文件(如有)，並由其法定代理人或輔助人協助辦理領獎事宜及扣繳手續。每人各活動限一次得獎機會，恕不重複得獎。</li>
+          <li>如因得獎者會員聯繫資料輸入不正確，或於期限內無法通知到得獎者，即視同放棄資格，恕不另行通知。</li>
+          <li>中獎者應依政府規定繳納所得稅並辦理扣繳手續(獎項哩程市值以1哩=新台幣1元計算，僅供所得稅計算之用)；依中華民國稅法規定，機會中獎獎項價值超過新台幣1,000元者，主辦單位依法須開立個人綜合所得憑證，以利得獎者申報之用。單一中獎之禮品之價值超過新台幣20,000元者，須先預繳10%稅金。中獎者有義務提供稅法上所需之個人資料及身分證影本，不願繳交稅金、個人資料或身分證影本者，視同放棄得獎權利。得獎者同意中華航空公司於完成得獎者獎項兌換及寄送之必要範圍內，蒐集、處理及利用得獎者於本聲明中所提供之個人資料。</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>抽獎方式</h3>
+        <ul>
+          <li>本活動認定之購票時間以中華航空開票系統時間為準。</li>
+          <li>每張機票限登錄一次。</li>
+          <li>「百萬豪哩遊世界」獎項將於2019/11/29於中華航空台北分公司抽出幸運得主，抽獎現場將邀請公正人士進行電腦隨機抽獎，全程錄影存證。得獎名單將於抽獎當日公告於本活動網頁及中華航空官方臉書粉絲團。</li>
+          <li>若得獎者放棄領獎或中華航空無法通知到得獎者，則由當次抽獎時電腦隨機產生之順序遞補名單依次遞補。</li>
+          <li>得獎者登錄參加抽獎之原始機票，一旦辦理退票即喪失抽獎與得獎資格，將不接受獎項兌換。</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3 class=rule>獎項兌換規則</h3>
+        <ul>
+          <li>得獎名單公告後，中華航空將以EMAIL通知得獎者，得獎者需提供及核對會員資料（卡號、聯絡電話、收件地址）等資訊，並須依通知之指定日期前回覆相關資料，以確認領獎意願，逾期回覆視同放棄領獎(以中華航空系統收件時間為準)。</li>
+          <li>獎項不得轉讓，不得兌換現金，亦不得自行任意轉售。</li>
+          <li>得獎者登錄參加抽獎之原始機票，如辦理退票視同放棄得獎資格，將不接受獎項兌換。若獎項已兌換，得要求退還獎項或返還獎項價值。</li>
+          <li>其他與本活動贈獎之相關未盡事宜，請詳閱本活動中獎通知函。</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>注意事項</h3>
+        <ul>
+          <li>得獎者遵守本活動相關辦法及說明，如未同意相關作業則視同放棄得獎權利且不得異議。</li>
+          <li>得獎者保證所提供之領獎資料係真實無誤，且未冒用或盜用他人資料。如經中華航空發現或經第三人檢舉查證所得資料有不實、不正確或不合法之情事，中華航空有權立即取消得獎者資格，且由得獎者自負一切民、刑事法律責任。若活動參與者違反本條擔保事項而致中華航空受有損害，得獎者應賠償中華航空因此所受之一切損害（包括但不限於對第三人之賠償、律師費用、訴訟費用等），並得追回得獎獎項。</li>
+          <li>參加本活動所填寫之個人資料，均視為已同意所填寫之個人資料，供中華航空於辦理『百萬豪哩遊世界』活動之特定目的必要範圍內處理及利用。</li>
+          <li>蒐集之目的：僅限本活動抽獎使用；</li>
+          <li>蒐集之個人資料類別：機票票號、機票上之英文姓名、中文姓名、地址、電子郵件及電話於參加活動時所提供之個人資料；</li>
+          <li>個人資料利用之期間：本活動開始及結束,且獎項寄送執行完成等相關程序業務所必須之保存期間，惟因依法律規定、執行業務必須或經參加者書面同意者不在此限；</li>
+          <li>地區：僅限於台灣、金門、澎湖、馬祖等地區利用；</li>
+          <li>對象：中華航空及所委任處理營業相關事務之第三人。</li>
+          <li>本活動參加者得依個人資料保護法行使下列權利： </li>
+          <li>得向中華航空查詢、請求閱覽或請求製給複製本，而中華航空依法得酌收必要成本費用。 </li>
+          <li>得向中華航空請求補充或更正。 </li>
+          <li>得向中華航空請求停止蒐集、處理、利用或請求刪除，惟中華航空因法律規定或經營業務所必須者，得不依其請求為之。</li>
+          <li>相關資料保安政策請參考中華航空官網。</li>
+          <li>參加者可自由選擇是否提供完整個人資訊，惟若資訊不完整者，將無法參與本活動。</li>
+          <li>參加者若以惡意之電腦程式、違反本活動辦法、偽造、詐欺或其他不正當行為或其他明顯違反活動公平性之方式參加本活動者，中華航空有權取消其獲獎資格，已領取獎項者，應立即返還，如已使用應予賠償，中華航空保留所有法律上之權利。</li>
+          <li>本活動如有任何因電腦、網路、電話、技術或其他不可歸責於中華航空之事由，而使參與本活動者所登錄之資料有所遺失、錯誤、無法辨識或毀損所導致資料無效之狀況，中華航空不負任何法律責任，參加者與得獎者亦不得異議。</li>
+          <li>得獎者需提供身分證明文件影本，並配合政府規定繳納所得稅並辦理扣繳手續。</li>
+          <li>本活動範圍僅適用於臺灣地區，獎項以活動網站公布資料為準。所有公告如有未盡事宜，中華航空保留修改、終止、變更活動內容細節之權利。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide2" v-if="guide=='guide2'">
+      <div class="guide_title">
+        <img src="img/svg/note_title02.svg" alt="">
+      </div>
+      <div class="block">
+        <h3>活動辦法</h3>
+        <ul>
+          <li>凡於指定通路(可樂、雄獅、東南、百威、山富、五福及喜鴻)購買中華航空/華信航空雙人(含)以上之團體行程並完成付訂，且出發時間於2019/12/1~2020/03/31(2020/01/22~2020/01/26不適用)之旅客，於2019/11/15 18:00 (臺北時間)前至本活動網頁完成登錄(旅行社名稱、出發日期、目的地(航點)、姓名、身分證字號、手機及EMAIL)，即可享有「萬元旅遊抵用金天天抽」活動之抽獎資格。</li>
+          <li>將於2019/11/02~2019/11/15天天抽出一名得獎者並於次工作日公告於本活動網站，每人限登錄一次且限中獎一次。</li>
+          <li>凡2019/11/08~2019/11/11 於台北國際旅展(ITF)期間於旅展現場指定通路購買中華航空/華信航空之團體行程並完成付訂，即可至華航攤位(J1301)參加「團體優惠抵用券」現場抽獎活動，有機會立即享折價！數量有限，送完為止。活動辦法及使用規則依現場公告為準。</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>抽獎獎項</h3>
+        <h4>•「萬元旅遊抵用金天天抽」活動獎項</h4>
+        <div class="prize_10k">
+          <!-- <img src="img/coin.png" alt=""> -->
+          <p><span class="pink">1萬元</span>旅遊抵用金 共<span class="num">14</span>名</p>
+        </div>
+      </div>
+      <div class="block">
+        <h3>獎項說明</h3>
+        <ul>
+          <li>旅遊抵用金限折抵原購買之華航團體旅遊產品，且由原銷售之旅行社協助得獎者使用旅遊抵用金服務。</li>
+          <li>旅遊抵用金限於2020/03/31(含)前使用完畢，逾期失效。</li>
+          <li>旅遊抵用金限折抵得獎者本人及其同行親友之團費，旅遊抵用金不得轉讓、不得兌換現金及轉售。</li>
+          <li>得獎者如取消原訂購之旅遊行程，則立即取消得獎資格；如因原出發日期無法成團，而需變更出發日期，由原報名之旅行業者協助變更日期或改購買其他華航之團體行程方可使用旅遊抵用金。</li>
+          <li>旅遊抵用金最高可折抵全額團費，非旅遊行程中的旅遊項目不得抵扣(如賣店商品及小費等)，個人額外旅遊保險、機場稅及燃油附加稅等稅金須由得獎者自負。</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>領獎辦法</h3>
+        <ul>
+          <li>中華航空將於2019/11/22以E-mail或電話通知得獎者，得獎者須依通知信及兌換憑證於指定日期前至原報名之旅行社完成訂單，逾期視同放棄領獎。</li>
+          <li>機會中獎獎項價值超過新台幣1,000元者，依法須開立個人綜合所得憑證，以利得獎者申報之用。單一中獎之禮品之價值超過新台幣20,000元者，須先預繳10%稅金。得獎者有義務提供稅法上所需之個人資料及身分證影本，不願繳交稅金、個人資料或身分證影本者，視同放棄得獎權利。得獎者同意中華航空公司於完成得獎者獎項兌換及寄送之必要範圍內，蒐集、處理及利用得獎者於本聲明中所提供之個人資料。</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>其他注意事項</h3>
+        <ul>
+          <li>得獎者必須遵守本活動之相關辦法及領獎方式，如不願接受則視同放棄權利不得異議。</li>
+          <li>得獎者保證所提供之領獎資料皆為真實且正確，且未冒用或盜用任何第三者之資料，如有不實或不正確之情事，經中華航空發現或經第三人檢舉經查證屬實，將立即取消其得獎資格。</li>
+          <li>如因故取消旅遊行程，不得以本旅遊抵用金抵扣所產生之取消費。</li>
+          <li>「萬元旅遊抵用金」與ITF旅展現場「團體優惠抵用券」可合併使用，惟不得與其他促銷案合併使用。</li>
+          <li>旅遊抵用金約定條款未盡事宜，悉依兌換旅遊商品之銷售約定、使用規則或契約為主。</li>
+          <li>本活動若有其他未盡事宜，中華航空得隨時修訂，並保有最後詮釋及取消、變更本活動細節之權利。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer-guide">
+    <p>版權所有 © 中華航空股份有限公司 2019</p>
+  </footer>
+</div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vuejs-datepicker"></script>
+<script src="js/app.js"></script>
+<script>
+window.onscroll = function() {scrollFunction();};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    $('header').css('background-color','#93c9de')    
+  } else {
+    $('header').css('background','none')
+  }
+}
+
+AOS.init({
+    once: true
+});
+
+</script>

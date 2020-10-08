@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149919035-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149919035-1', {'page_title':'index'});
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
+  <!-- facebook share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="⭐華航線上旅展⭐買機票抽百萬豪哩" />
+  <meta property="og:description" content="全航線促銷優惠中" />
+  <meta property="og:image" content="https://2019itfchinaairlines.com.tw/img/fb_share.jpg" />
+  <meta property="og:url" content="https://2019itfchinaairlines.com.tw/" />
+  <!-- favicon -->
+  <link rel="icon" href="img/favicon.ico">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/index.js?1570635412867"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/m_css_layout.css">
+
+  <title>⭐華航線上旅展⭐買機票抽百萬豪哩</title>
+  <script>
+  var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+  function init() {
+    canvas = document.getElementById("canvas");
+    anim_container = document.getElementById("animation_container");
+    dom_overlay_container = document.getElementById("dom_overlay_container");
+    var comp=AdobeAn.getComposition("0447025901516C4B89C47BCF8FB0690F");
+    var lib=comp.getLibrary();
+    var loader = new createjs.LoadQueue(false);
+    loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+    loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+    var lib=comp.getLibrary();
+    loader.loadManifest(lib.properties.manifest);
+  }
+  function handleFileLoad(evt, comp) {
+    var images=comp.getImages();	
+    if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+  }
+  function handleComplete(evt,comp) {
+    //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+    var lib=comp.getLibrary();
+    var ss=comp.getSpriteSheet();
+    var queue = evt.target;
+    var ssMetadata = lib.ssMetadata;
+    for(i=0; i<ssMetadata.length; i++) {
+      ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+    }
+    exportRoot = new lib.index();
+    stage = new lib.Stage(canvas);
+    stage.addChild(exportRoot);	
+    //Registers the "tick" event listener.
+    fnStartAnimation = function() {
+      createjs.Ticker.setFPS(lib.properties.fps);
+      createjs.Ticker.addEventListener("tick", stage);
+    }	    
+    //Code to support hidpi screens and responsive scaling.
+    function makeResponsive(isResp, respDim, isScale, scaleType) {		
+      var lastW, lastH, lastS=1;		
+      window.addEventListener('resize', resizeCanvas);		
+      resizeCanvas();		
+      function resizeCanvas() {			
+        var w = lib.properties.width, h = lib.properties.height;			
+        var iw = window.innerWidth, ih=window.innerHeight;			
+        var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+        if(isResp) {                
+          if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+            sRatio = lastS;                
+          }				
+          else if(!isScale) {					
+            if(iw<w || ih<h)						
+              sRatio = Math.min(xRatio, yRatio);				
+          }				
+          else if(scaleType==1) {					
+            sRatio = Math.min(xRatio, yRatio);				
+          }				
+          else if(scaleType==2) {					
+            sRatio = Math.max(xRatio, yRatio);				
+          }			
+        }			
+        canvas.width = w*pRatio*sRatio;			
+        canvas.height = h*pRatio*sRatio;
+        canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+        canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+        stage.scaleX = pRatio*sRatio;			
+        stage.scaleY = pRatio*sRatio;			
+        lastW = iw; lastH = ih; lastS = sRatio;		
+      }
+    }
+    makeResponsive(true,'both',true,1);	
+    AdobeAn.compositionLoaded(lib.properties.id);
+    fnStartAnimation();
+  }
+  </script>
+</head>
+<body onload="init();">
+<div class="wrapper" id="app">
+  <header class="header">
+    <a href="index.html" class="logo" @click.prevent="totop" onclick="gtag('event', 'index_logo',{'event_label' : '首頁-左上角選單按鈕'})">
+      <img src="img/svg/logo.svg" alt="">
+      <img src="img/svg/logo02.svg" alt="" class="m_logo">
+    </a>
+    <div class="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul class="menu">
+        <li><a href="#million" @click.prevent="toMillion" onclick="gtag('event', 'navigation_ticket',{'event_label' : '  百萬豪哩遊世界'})">百萬豪哩遊世界</a></li>
+        <li><a href="#gacha" @click.prevent="toGacha" onclick="gtag('event', 'navigation_lottery',{'event_label' : '  會員扭扭樂'})">會員扭扭樂</a></li>
+        <li><a href="#waypoint" @click.prevent="toFly" onclick="gtag('event', 'navigation_promotion',{'event_label' : '優惠機票'})">優惠機票</a></li>
+        <li><a href="#waypoint" @click.prevent="toGroup" onclick="gtag('event', 'navigation_group',{'event_label' : '團體享好康'})">團體享好康</a></li>
+        <li><a href="guide.html" onclick="gtag('event', 'navigation_terms_conditions',{'event_label' : '活動辦法'})">活動辦法</a></li>
+        <li><a href="award.html" onclick="gtag('event', 'navigation_award',{'event_label' : '得獎名單'})">得獎名單</a></li>
+        <!-- <li><a href="" onclick="gtag('event', 'navigation_program_list',{'event_label' : '旅展活動時間表'})">旅展活動時間表</a></li> -->
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </header>
+  <section class="keyVisual">
+    <div id="animation_container" style="width:1291px; height:1097px">
+      <canvas id="canvas" width="1291" height="1097" style="position: absolute; display: block; "></canvas>
+      <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1291px; height:1097px; position: absolute; left: 0px; top: 0px; display: block;">
+      </div>
+    </div>
+    <h1><img src="img/kv_title.png" alt=""></h1>
+    <div class="subttl"><img src="img/svg/kv_txt.svg" alt=""></div>
+    <div class="kvball_area">
+      <div class="kv_ball kv_ball1">
+        <p>會員扭扭樂<br>抽好哩</p>
+        <a href="" class="kvbtn kvbtn1" @click.prevent="toGacha" onclick="gtag('event', 'index_lett',{'event_label' : '首頁-左邊扭扭樂開始按鈕'})">會員登入</a>
+      </div>
+      <div class="kv_ball kv_ball2">
+        <p>百萬豪哩<br>遊世界</p>
+        <a href="" class="kvbtn kvbtn2" @click.prevent="toMillion" onclick="gtag('event', 'index_right',{'event_label' : '首頁-右邊百萬開始按鈕'})">購票登錄抽大獎</a>
+      </div>
+    </div>
+    <div class="kv_img_area">
+      <span class="kvcloud1"><img src="img/cloud01.png" alt=""></span>
+      <span class="kvcloud2"><img src="img/cloud02.png" alt=""></span>
+      <span class="kvcloud3"><img src="img/cloud03.png" alt=""></span>
+      <span class="kvtrunk"><img src="img/kv_trunk.png" alt=""></span>
+      <span class="kvgirl"><img src="img/kv_girl.png" alt=""></span>
+      <span class="kvboy"><img src="img/kv_boy.png" alt=""></span>
+      <span class="kvplane"><img src="img/kv_airplane.png" alt=""></span>
+    </div>
+    </section>
+  <section class="million" id="million">
+    <div class="para">
+      <h2>
+        <img src="img/svg/million_title.svg" alt="" class="title_img">
+        <img src="img/million_title_m.jpg" alt="" class="title_img_m">
+      </h2>
+      <div class="formtop">
+        <p>10/18-11/22購買個人機票並登錄成功，<br>
+          就有機會抽百萬豪哩大獎！</p>
+      </div>
+      <div class="formbody">
+        <div class="form-input">
+          <span class="icon plane">機票票號</span>
+          <input type="text" required maxlength="13" placeholder="297/803...共13碼" v-model="million.ticket" disabled="disabled">
+        </div>
+        <div class="form-input">
+          <span class="icon">機票上英文姓</span>
+          <input type="text" required placeholder="CHANG" v-model="million.lastname" disabled="disabled">
+        </div>
+        <div class="form-input">
+          <span class="icon">機票上英文名</span>
+          <input type="text" required placeholder="HSIAOMING" v-model="million.firstname" disabled="disabled">
+        </div>
+        <div class="form-input">
+          <span class="icon">會員卡號</span>
+          <input type="text" required placeholder="Cl1234567" v-model="million.card" disabled="disabled">
+        </div>
+        <div class="form-input">
+          <span class="icon">中文姓名</span>
+          <input type="text" required placeholder="張小明" v-model="million.chinesename" disabled="disabled">
+        </div>
+        <div class="form-input">
+          <span class="icon phone">手機號碼</span>
+          <input type="tel" required placeholder="0900123456" v-model="million.phone" oninput="value=value.replace(/[^\d]/g,'')" disabled="disabled">
+        </div>
+        <div class="form-input">
+          <span class="icon mail">Email</span>
+          <input type="email" required placeholder="chen@gmail.com" v-model="million.mail" disabled="disabled">
+        </div>
+        <div class="input-radio">
+          <input type="checkbox" id="million_agree" v-model="million.agree">        
+          <label for="million_agree" class="radio-label"></label>
+          <label for="million_agree">同意參加活動與<a href="https://www.china-airlines.com/tw/zh/terms-and-conditions/information-security">隱私權政策</a></label>
+        </div>
+      </div>
+      <div class="form_btn_area">
+        <a href="https://www.china-airlines.com/tw/zh/discover/promotion/current-offer/2019ITF" class="btn" target="_blank" onclick="gtag('event', 'ticket_left_buy',{'event_label' : '左按鈕：優惠機票購票GO'})">優惠機票購票去</a>
+        <a href="javascript:;" class="btn" @click.prevent="endmil" onclick="gtag('event', 'ticket_right_go',{'event_label' : '右按鈕：登錄立即抽'})">登錄立即抽</a>
+      </div>
+      <img data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-center" src="img/million_airplane.png" alt="" class="million_plane">
+      <img src="img/cloud02.png" alt="" class="million_cloud1">
+      <img src="img/cloud03.png" alt="" class="million_cloud2">
+    </div>
+  </section>
+  <section class="gacha" id="gacha">
+    <h2>
+      <img src="img/svg/game_title.svg" alt="" class="title_img">      
+      <img src="img/gacha_title_m.png" alt="" class="title_img_m">
+    </h2>
+    <p>登入會員立即參加扭扭樂活動<br>最高6,000哩等你來拿！</p>
+    <div class="form_area">
+      <div class="form-input">
+        <span class="icon">會員卡號</span>
+        <input type="text" placeholder="C1234567" v-model="gacha.card" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon">英文姓氏</span>
+        <input type="text" placeholder="CHANG" v-model="gacha.lastname" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon">英文名字</span>
+        <input type="text" placeholder="HSIAOMING" v-model="gacha.firstname" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon phone">手機號碼</span>
+        <input type="tel" placeholder="0900123456" v-model="gacha.phone" oninput="value=value.replace(/[^\d]/g,'')" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon mail">E-mail</span>
+        <input type="email" placeholder="chen@gmail.com" v-model="gacha.mail" disabled="disabled">
+      </div>
+      <div class="input-radio">
+        <input type="checkbox" id="gacha_agree" v-model="gacha.agree">        
+        <label for="gacha_agree" class="radio-label"></label>
+        <label for="gacha_agree">同意參加活動與<a href="https://www.china-airlines.com/tw/zh/terms-and-conditions/information-security">隱私權政策</a></label>
+      </div>
+    </div>
+    <div class="form_btn_area">
+      <a href="https://calec.china-airlines.com/dynasty-flyer/enroll.aspx" class="btn" target="_blank" onclick="gtag('event', 'lottery_member_go',{'event_label' : '左按鈕：註冊華夏會員GO'})">註冊華夏會員</a>
+      <a href="" class="btn" @click.prevent="endgacha" onclick="gtag('event', 'lottery_go',{'event_label' : '右按鈕：登錄立即抽'})">登入抽好哩</a>
+    </div>
+    <img data-aos="fade-up"  data-aos-duration="1000"  data-aos-anchor-placement="top-center"
+      class="gacha_machine" src="img/game_machine.png" alt="">
+    <img class="gacha_ball01" src="img/game_ball01.png" alt="">
+    <img class="gacha_ball02" src="img/game_ball02.png" alt="">
+    <img src="img/cloud01.png" alt="" class="gacha_cloud1">
+    <img src="img/cloud03.png" alt="" class="gacha_cloud2">
+  </section>
+  <section class="waypoint" id="waypoint">
+    <h2>
+      <img src="img/svg/waypoint_title.svg" alt="">
+    </h2>
+    <p>開票時段：2019/10/18-11/22<br>出發時段：各航線依官網公告為準<br></p>
+    <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn" target="_blank" onclick="gtag('event', 'promotion_description_go',{'event_label' : '更多優惠立即GO'})">更多優惠<span style="color:#efc659">立即GO</span></a>
+    <div class="card_area">
+      <div
+        class="card card-FRA">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>法蘭克福</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">22,620</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div
+        class="card card-LA">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>洛杉磯</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">14,840</span> 起(含稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div
+        class="card card-AKL">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>奧克蘭</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">14,608</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div data-aos="fade-up"  data-aos-anchor-placement="top-center"
+        class="card card-SIN">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>新加坡</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">5,916</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div data-aos="fade-up"  data-aos-anchor-placement="top-center"
+        class="card card-shanhai">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>上海浦東</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">4,895</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div data-aos="fade-up"  data-aos-anchor-placement="top-center"
+        class="card card-bangkok">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>曼谷</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">3,496</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div data-aos="fade-up"  data-aos-anchor-placement="top-center"
+        class="card card-OSA">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>大阪</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">4,950</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div data-aos="fade-up"  data-aos-anchor-placement="top-center"
+        class="card card-korea">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>首爾</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">4,050</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+      <div data-aos="fade-up"  data-aos-anchor-placement="top-center"
+        class="card card-hk">
+        <div class="card_content">
+          <p>臺北</p>
+          <h4>香港</h4>
+          <p class="price"><span class="twd">TWD</span> <span class="number">2,100</span> 起(未稅)</p>
+          <a href="https://www.china-airlines.com/tw/zh?utm_source=campaignsite&utm_medium=promotion&utm_campaign=BM_19_ITF&utm_content=banner_2" class="btn card_btn" target="_blank" onclick="gtag('event', ' promotion_veiwpoint',{'event_label' : '九個票卡'})">立即訂購</a>
+        </div>
+      </div>
+    </div>
+    <img src="img/cloud02.png" alt="" class="waypoint_cloud1">
+    <img data-aos="fade-left" src="img/cloud03.png" alt="" class="waypoint_cloud2">
+    <img src="img/cloud01.png" alt="" class="waypoint_cloud3">
+  </section>
+  <section class="group" id="group">
+    <h2>
+      <img src="img/svg/bonus_title.svg" alt="" class="group_title">
+      <img src="img/bonus_title_m.png" alt="" class="group_title_m">
+    </h2>
+    <p class="info"><span class="pink">活動已結束，敬請參閱得獎名單<br>將於11/22 E-mail通知得獎者！</span></p>
+    <div class="form_area">
+      <div class="form-input">
+        <span class="icon comp">旅行社名稱</span>
+        <input type="text" placeholder="請選擇旅行社" disabled="disabled">
+        <!-- <select v-model="group.comp">
+          <option value="" selected disabled hidden>請選擇旅行社</option>
+          <option value="山富">山富旅遊</option>
+          <option value="五福">五福旅遊</option>
+          <option value="可樂">可樂旅遊</option>
+          <option value="百威">百威旅遊</option>
+          <option value="東南">東南旅遊</option>
+          <option value="雄獅">雄獅旅遊</option>
+          <option value="喜鴻">喜鴻假期</option>
+        </select> -->
+      </div>
+      <div class="form-input">
+        <span class="icon date">出發日期</span>
+        <input type="text" name="date" placeholder="請選擇日期" v-model="group.date" disabled="disabled">
+        <!-- <vuejs-datepicker name="date" :format="customFormatter" placeholder="請選擇日期" :disabled-dates="disabledDates" :open-date="openDate"></vuejs-datepicker> -->
+      </div>
+      <div class="form-input">
+        <span class="icon dest">目的地</span>
+        <input type="text" placeholder="東京5日" v-model="group.dest" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon">中文姓名</span>
+        <input type="text" placeholder="張小明" v-model="group.name" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon">身分證字號</span>
+        <input type="text" placeholder="A123456789" maxlength="10" v-model="group.ID" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon phone">手機號碼</span>
+        <input type="tel" placeholder="0900123456" v-model="group.phone" oninput="value=value.replace(/[^\d]/g,'')" disabled="disabled">
+      </div>
+      <div class="form-input">
+        <span class="icon mail">E-mail</span>
+        <input type="email" placeholder="chen@gmail.com" v-model="group.mail" disabled="disabled">
+      </div>
+      <div class="input-radio">
+        <input type="checkbox" id="group_agree" v-model="group.agree">        
+        <label for="group_agree" class="radio-label"></label>
+        <label for="group_agree">同意<a href="guide_group.html">本活動辦法</a>與<a href="https://www.china-airlines.com/tw/zh/terms-and-conditions/information-security">隱私權政策</a></label>
+      </div>
+    </div>
+    <div class="form_btn_area">
+      <a href="" class="btn" @click.prevent="endGroup" onclick="gtag('event', 'group_go',{'event_label' : '輸入完成「立即登錄」按鈕'})">立即登錄</a>
+    </div>
+    <div class="groupball_arae">
+      <div class="group_ball">
+        <p>團體行程優惠</p>
+        <a href="" class="kvbtn kvbtn1" @click.prevent="openBonus" onclick="gtag('event', 'group_agency',{'event_label' : '左邊「團體行程優惠」按鈕'})">立即前往</a>
+      </div>
+      <div class="group_ball group_ball2">
+        <p>大陸行程優惠</p>
+        <a href="https://www.9ichinaairlines.com.tw/" target="_blank" class="kvbtn kvbtn1" onclick="gtag('event', 'group_china',{'event_label' : '右邊「大陸行程優惠」按鈕'})">立即前往</a>
+      </div>
+    </div>
+    <img src="img/bonus_2man.png" alt="" class="bonus2">
+    <img src="img/bonus_5man.png" alt="" class="bonus5">
+    <div class="mask">
+      <div class="bonus_head">
+        <p>團體行程優惠</p>
+        <div class="close" @click="closeBonus">✕</div>
+      </div>
+      <div class="bonus_body">
+        <a href="https://www.travel4u.com.tw/project/2019itf/ciitf.aspx" onclick="gtag('event', 'richmond',{'event_label' : '山富旅遊按鈕'})" target="_blank"><img src="img/bonus_logo01.png" alt=""></a>
+        <a href="http://www.lifetour.com.tw/event/group-ciair" onclick="gtag('event', 'lifetour',{'event_label' : '五福旅遊按鈕'})" target="_blank"><img src="img/bonus_logo02.png" alt=""></a>
+        <a href="https://reurl.cc/ObMmLA" onclick="gtag('event', 'cola',{'event_label' : '可樂旅遊按鈕'})" target="_blank"><img src="img/bonus_logo03.png" alt=""></a>
+        <a href="https://www.bwt.com.tw/Travel/Tour/KeyWord/index.aspx?SN=91" onclick="gtag('event', 'bestway',{'event_label' : '百威旅遊按鈕'})" target="_blank"><img src="img/bonus_logo04.png" alt=""></a>
+        <a href="https://www.settour.com.tw/act/mkt/ciair/?utm_source=CI&utm_medium=mkt&utm_campaign=disney&utm_content=CIitf2019&a=ADV0000000310&s=5606" onclick="gtag('event', 'east',{'event_label' : '東南旅遊按鈕'})" target="_blank"><img src="img/bonus_logo05.png" alt=""></a>
+        <a href="https://www.liontravel.com/promotion/airline/chinaair-tour/" onclick="gtag('event', 'lion',{'event_label' : '雄獅旅遊按鈕'})" target="_blank"><img src="img/bonus_logo06.png" alt=""></a>
+        <a href="https://www.besttour.com.tw/e_web/#Activity/ci_sale" onclick="gtag('event', 'besttour',{'event_label' : '喜鴻假期按鈕'})" target="_blank"><img src="img/bonus_logo07.png" alt=""></a>
+      </div>
+    </div>
+  </section>
+  <div class="totop">
+    <a href="" @click.prevent="totop">
+      <img src="img/top.png" alt="" class="totop_img">
+      <img src="img/svg/top.svg" alt="" class="totop_img_m">
+    </a>
+  </div>
+  <footer>
+    <p>版權所有 © 中華航空股份有限公司 2019</p>
+  </footer>
+</div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://unpkg.com/vuejs-datepicker"></script>
+<script src="js/app.js"></script>
+<script>
+// window.onscroll = function() {scrollFunction();scrollFunction2();};
+window.addEventListener('scroll',function() {scrollFunction();scrollFunction2();scrollFunctionTop()});
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    $('header.header').css('background-color','#93c9de')    
+  } else {
+    $('header').css('background','none')
+  }
+}
+
+AOS.init({
+    once: true
+});
+var millionY = $('#million').offset().top;
+var gachaY = $('#gacha').offset().top;
+var waypointY = $('#waypoint').offset().top;
+var windowH = $(window).height();
+
+function scrollFunction2() {
+  var y = window.scrollY
+  if($(document).width() > 480){
+    // if (document.body.scrollTop > AA || document.documentElement.scrollTop > AA) {
+    if (windowH + y > gachaY && y < 3000) {
+      $('.para').addClass('fixed') 
+    }else {    
+      $('.para').removeClass('fixed')  
+    }
+  }
+}
+
+
+function scrollFunctionTop() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    $('.totop').fadeIn();
+  } else {
+    $('.totop').fadeOut()
+  }
+}
+
+// function scrollFunctionTag(){
+//   var y = window.scrollY;
+//   if (y > waypointY){
+//     // console.log('waypoint')
+//     gtag('config', 'UA-149919035-1', {'page_title':'promotion'});
+//   }else if(y > gachaY){    
+//     // console.log('gacha')
+//     gtag('config', 'UA-149919035-1', {'page_title':'lottery'});
+//   }else if(y > millionY){    
+//     // console.log('million')
+//     gtag('config', 'UA-149919035-1', {'page_title':'ticket'});
+//   }
+// }
+
+// $(function() {
+//   $('input[name="date"]').daterangepicker({
+//     singleDatePicker: true,
+//     showDropdowns: true,
+//     minYear: 1901,
+//     maxYear: parseInt(moment().format('YYYY'),10)
+//   });
+// });
+
+</script>

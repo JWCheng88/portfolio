@@ -1,0 +1,553 @@
+/* media
+----------------------------------------------------------------------------*/
+@media screen and (max-width: 1280px) {
+  .million:before{
+    top: -110px;
+    border-width: 0px 100vw 110px 0px;
+  }
+  .gacha:before{
+    top: -110px;
+    border-width: 0px 100vw 110px 0px;
+  }
+  .waypoint:before{
+    top: -110px;
+    border-width: 0px 100vw 110px 0px;
+  }
+  .group:before{
+    top: -110px;
+    border-width: 110px 100vw 0px 0px;
+  }
+  .million_plane{
+    left: 2%;
+  }
+  .gacha_cloud2, .game_cloud2, .game_cloud3{
+    display: none;
+  }
+  .waypoint_cloud1{
+    left: 15%;
+  }
+  .waypoint_cloud2{
+    right: -10%;
+  }
+  .waypoint_cloud3{
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .million_plane{
+    display: none;
+  }
+  .million_cloud1{
+    display: none;
+  }
+  .million_cloud2{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1080px) {
+  .guide h2:after, .guide h2:before{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .kvplane{
+    right: 0;
+  }
+  .game #animation_container{
+    margin-top: 20px;
+  }
+  .playGacha{
+    top: 714px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .million:before{
+    top: -90px;
+    border-width: 0px 100vw 90px 0px;
+  }
+  .gacha:before{
+    top: -90px;
+    border-width: 0px 100vw 90px 0px;
+  }
+  .waypoint:before{
+    top: -90px;
+    border-width: 0px 100vw 90px 0px;
+  }
+  .group:before{
+    top: -90px;
+    border-width: 90px 100vw 0px 0px;
+  }
+  .gacha_ball01, .gacha_cloud1, .waypoint_cloud2, .waypoint_cloud3, .game_egg1, .game_egg2, .group h2:before, .group h2:after{
+    display: none;
+  }
+  .waypoint_cloud1{
+    left: 5%;
+  }
+  .game #animation_container:after{
+    display: none;
+  }
+  footer{    
+    background: url(../img/footer.png) 1493px;
+  }
+  footer.footer-guide{
+    background: url(../img/footer_guide.png) 1493px;
+  }
+  .award_table,.million-table, .gacha-table{
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keyVisual{
+    height: 600px;
+    background: url(../img/kv_bg.png) no-repeat top center;
+    background-size: cover;
+  }
+  .formbody:before{
+    display: none;
+  }
+  .kv_ball p{
+    font-size: 22px;
+    margin-top: 34px;
+  }
+  .kv_ball1{
+    margin-right: 40px;
+    width: 180px;
+    height: 180px;
+    opacity: 1;
+    transform: scale(1);
+    animation: ball_float 3s infinite;
+  }
+  .kv_ball2{
+    margin-left: 40px;
+    width: 190px;
+    height: 190px;
+    opacity: 1;
+    transform: scale(1);
+    animation: ball_float 3s infinite .4s;
+  }
+  .kvbtn1, .kvbtn1:before{
+    width: 121px;
+  }
+  .kvbtn2, .kvbtn2:before{
+    width: 155px;
+  }
+  .keyVisual #animation_container{
+    display: none;
+  }
+  .keyVisual h1{
+    display: block;
+    width: 450px;
+    margin: auto;
+    position: absolute;
+    top: 115px;
+    left: 0;
+    right: 0;
+  }
+  .subttl{    
+    display: block;
+    width: 480px;
+    margin: auto;
+    position: absolute;
+    top: 360px;
+    left: 0;
+    right: 0;
+  }
+  .twomen{
+    display: none;
+  }
+  .group_ball {
+    margin: 0 20px;
+  }
+  .group .group_ball p{
+    font-size: 22px;
+  }
+  .prize_10k:after{
+    background: url(../img/coin_m.png) no-repeat center center;
+  }
+  .guide .prize_10k p {
+    top: 68px;
+    left: 37px;
+  }
+  .bonus2, .bonus5, .group_title{
+    display: none;
+  }
+  .group h2{
+    max-width: 100%;
+  }
+  .group_title_m{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .million:before{
+    top: -70px;
+    border-width: 0px 100vw 70px 0px;
+  }
+  .gacha:before{
+    top: -70px;
+    border-width: 0px 100vw 70px 0px;
+  }
+  .waypoint:before{
+    top: -70px;
+    border-width: 0px 100vw 70px 0px;
+  }
+  .group:before{
+    top: -70px;
+    border-width: 70px 100vw 0px 0px;
+  }
+  .formbody:after{
+    display: none;
+  }
+  .gacha_machine, .gacha_ball02, .game_cloud1{
+    display: none;
+  }
+  .vdp-datepicker__calendar{
+    left: -150px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .game #animation_container{
+    margin-top: 40px;
+    width: 480px !important;
+    height: 480px !important;
+  }
+  .game #animation_container canvas{
+    width: 480px !important;
+    height: 480px !important;
+  }
+  .game .machine{
+    width: 480px;
+  }
+  .playGacha{
+    top: 667px;
+  }
+  .group_ball {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header{
+    padding: 5px 30px;
+  }
+  .menuToggle span{
+    top: 14px;
+  }
+  .logo{
+    width: 150px;
+  }
+  .logo img{
+    display: none;
+  }
+  .logo img.m_logo{
+    display: block;
+  }
+  .keyVisual{
+    background: url(../img/index_bg_m.jpg) no-repeat top center;
+    background-size: contain;
+    height: 420px;
+    padding-bottom: 250px;
+  }
+  .keyVisual h1{
+    display: block;
+    width: 250px;
+    margin: auto;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+  }
+  .subttl{    
+    display: block;
+    width: 285px;
+    margin: auto;
+    position: absolute;
+    top: 280px;
+    left: 0;
+    right: 0;
+  }
+  .keyVisual #animation_container{
+    display: none;
+  }
+  .kvball_area{
+    bottom: 75px;
+  }
+  .kv_ball p{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+  .kv_ball1{
+    margin-right: 10px;
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+    transform: scale(1);
+    animation: ball_float 3s infinite;
+  }
+  .kv_ball2{
+    margin-left: 10px;
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+    transform: scale(1);
+    animation: ball_float 3s infinite .4s;
+  }
+  .kvbtn1, .kvbtn1:before{
+    letter-spacing: normal;
+    width: 101px;
+    height: 36px;
+    line-height: 36px;
+  }
+  .kvbtn2, .kvbtn2:before{
+    letter-spacing: normal;
+    width: 118px;
+    height: 36px;
+    line-height: 36px;
+  }
+  .title_img{
+    display: none;
+  }
+  .title_img_m{
+    display: block;
+  }
+  .million h2, .gacha h2{
+    width: 100%;
+    max-width: 100%;
+  }
+  .million:before{
+    top: -50px;
+    border-width: 0px 100vw 50px 0px;
+  }
+  .million .form-input span, .million .form-input span.icon{
+    margin-right: 10px;
+  }
+  .form-input span:before, .form-input span.icon:before{
+    margin-right: 5px;
+  }
+
+  .gacha:before{
+    top: -50px;
+    border-width: 0px 100vw 50px 0px;
+  }
+  .group:before{
+    top: -50px;
+    border-width: 50px 100vw 0px 0px;
+  }
+  .formtop{
+    background: none;
+  }
+  .formtop:after{
+    display: none;
+  }
+  .formtop p, .gacha p{
+    /* margin: 0 20px; */
+    font-size: 16px;
+  }
+  .btn{
+    width: 60%;
+    margin: 10px auto;
+  }
+  .gacha .form_btn_area, .million .form_btn_area{
+    flex-direction: column-reverse;
+  }
+  .waypoint:before{
+    top: -50px;
+    border-width: 0px 100vw 50px 0px;
+  }
+  .waypoint h2 {
+    width: 270px;
+  }
+  .waypoint p{
+    font-size: 18px;
+  }
+  .million h2:before, .gacha h2:before, .waypoint h2:before, .waypoint_cloud1{
+    display: none;
+  }
+  .formtop:before{
+    display: none;
+  }
+  button.swal2-confirm.swal2-styled, button.swal2-cancel.swal2-styled {
+    margin: 8px 10px;
+    border: none;
+    width: 80%;
+  }
+  .game{
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  .game h1{
+    max-width: 80%;
+  }
+  .game #animation_container{
+    margin-top: 20px;
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .game #animation_container canvas{
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .game .machine{
+    width: 350px;
+    /* top: 295px; */
+  }
+  .result{
+    top: 70px;
+    background-position: center bottom 50px;
+    background-size: contain;
+  }
+  .playGacha{
+    top: 580px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .playGacha:before{
+    width: 120px;
+    height: 40px;
+  }
+  .guide_tab{
+    font-size: 16px;
+    height: 45px;
+    line-height: 45px;
+  }
+  .guide_tabarea:after{
+    top: -160px;
+  }
+  .guide .prize_item img{
+    width: 335px;
+    height: 131px;
+  }
+  .guide .prize_item p, .guide .prize_10k p {
+    font-size: 18px;
+    top: 31px;
+    right: 16px;
+  }
+  .guide .prize_item p.title {
+    top: 8px;
+    left: 18px;
+  }
+  .guide .prize_item p .num, .guide .prize_10k p .num {
+    font-size: 26px;
+  }
+  .guide .prize_10k:after{
+    width: 335px;
+    height: 131px;    
+    background-size: contain;
+    margin: auto;
+    top: 5px;
+  }
+  .guide .prize_10k p{
+    top: 50px;
+  }
+  .prize_10k{
+    padding-bottom: 100px;
+  }
+  .award h3{
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .award h3:after{
+    width: 330px;
+  }
+  .award h3.gacha-award:after {
+    width: 280px;
+  }
+  .week-tab{
+    font-size: 18px;
+  }
+  .week-tab span{
+    font-size: 12px;
+  }
+  .award_table tr td, .award_table tr th{
+    font-size: 14px;
+  }
+  .award_table thead tr th{
+    font-size: 18px;
+  }
+  .group p.info{
+    font-size: 16px;
+  }
+  .group_ball {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+  }
+  .group .group_ball p{
+    font-size: 17px;
+    margin-top: 40px;
+  }
+  .totop_img{
+    display: none;
+  }
+  .totop{
+    width: 50px;
+  }
+  .totop_img_m{
+    display: block;
+    opacity: .8;
+  }
+  .bonus_head{
+    top: 10%;
+  }
+  .bonus_body{
+    top: calc(10% + 110px);
+  }
+  .bonus_body a{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {  
+  .guide .prize_item img{
+    width: 300px;
+    height: 115px;
+  }
+  .guide .prize_item p, .guide .prize_10k p {
+    font-size: 16px;
+    top: 28px;
+    right: 15px;
+  }.guide .prize_item p.title {
+    top: 2px;
+    left: 15px;
+  }
+  .guide .prize_item p .num, .guide .prize_10k p .num {
+    font-size: 22px;
+  }  
+  .guide .prize_10k:after{
+    width: 300px;
+    height: 115px;    
+    top: 5px;
+  }
+  .guide .prize_10k p{
+    left: 28px;
+    top: 45px;
+  }
+  .million-table tr td, .million-table tr th, .gacha-table tr td, .gacha-table tr th {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+
+}
+@media screen and (max-width: 320px) {
+  .kv_ball1 {
+    margin-right: 5px;
+  }
+  .kv_ball2 {
+    margin-left: 5px;
+  }
+}

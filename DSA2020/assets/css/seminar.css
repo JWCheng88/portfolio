@@ -1,0 +1,200 @@
+@-webkit-keyframes donut-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes donut-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* .head_seminar {
+  background-image: url("../img/bg_head_seminar.png");
+} */
+
+.seminar {
+  width: 100%;
+  max-width: 1170px;
+  margin: 70px auto;
+  font-size: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1170px) {
+  .seminar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .seminar {
+    width: 90%;
+  }
+}
+
+.seminar-content {
+  margin-bottom: 60px;
+  width: 100%;
+  text-align: left;
+}
+
+.seminar-content h6 {
+  margin-top: 30px;
+  color: #b88b01;
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.seminar-content h6 span{
+  font-size: 26px;
+}
+
+.seminar-content p {
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideographic;
+  font-size: 16px;
+}
+
+.seminar-content ul {
+  list-style-type: decimal;
+  margin-bottom: 40px;
+}
+
+.seminar-content ul li {
+  margin-left: 20px;
+  line-height: 30px;
+  text-align: justify;
+  text-justify: inter-ideographic;
+}
+
+.grey-bg {
+  width: 100%;
+  padding: 40px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 0;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .grey-bg {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 1005px) {
+  .grey-bg {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .grey-bg {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .grey-bg {
+    padding-left: 10px;
+  }
+}
+
+.grey-bg .date,
+.grey-bg .speech,
+.grey-bg .location {
+  display: inline-block;
+  width: 30%;
+  margin-right: 30px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+  .grey-bg .date,
+  .grey-bg .speech,
+  .grey-bg .location {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 1005px) {
+  .grey-bg .date,
+  .grey-bg .speech,
+  .grey-bg .location {
+    margin-bottom: 20px;
+  }
+}
+
+.grey-bg .date::before,
+.grey-bg .speech::before,
+.grey-bg .location::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.grey-bg .date {
+  min-width: 280px;
+}
+
+.grey-bg .date::before {
+  background-image: url("~/assets/svg/calendar.svg");
+}
+
+.grey-bg .speech {
+  min-width: 215px;
+}
+
+.grey-bg .speech::before {
+  background-image: url("~/assets/svg/speech.svg");
+}
+
+.grey-bg .location {
+  min-width: 280px;
+}
+
+.grey-bg .location a {
+  color: #b88b01;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.grey-bg .location a:hover {
+  color: #a00000;
+}
+
+.grey-bg .location::before {
+  background-image: url("~/assets/svg/location.svg");
+}
+
+/*# sourceMappingURL=seminar.css.map */
+
+h5.soon{
+  margin: 50px auto 0;
+  width: 160px;
+  display: block;
+}

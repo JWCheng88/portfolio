@@ -1,0 +1,970 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap');
+body{
+    /* font-size: 100px; */
+    font-family: 'Noto Sans TC', sans-serif, Arial, Helvetica, '微軟正黑體', Microsoft JhengHei, Apple LiGothic, '蘋果儷中黑';
+    overflow-x: hidden;
+    background-image: url(../img/bg01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+input{
+    position: relative;
+}
+input:focus{
+    outline: none;
+}
+/* login */
+#login, #main{
+    background-image: url(../img/bg01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+#login{
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+}
+.login_logo{
+    width: 70%;
+    margin: auto;
+}
+.login{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+.circle{
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-color: #043988;
+    border-radius: 50%;
+    margin: auto;
+}
+.login_title{
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.login_title img{
+    margin-bottom: 10px;
+}
+.login_area input,
+.register input{
+    display: block;
+    background-color: transparent;
+    width: 80%;
+    margin: auto;
+    border: none;
+    border-bottom: solid 1px #fff;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.login_area input::placeholder,
+.register input::placeholder{
+    color: #a0ecff;
+}
+.login_bottom{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.login_bottom div{
+    padding: 0 20px;
+}
+.login_bottom div:first-child{
+    border-right: solid 1px #fff;
+}
+.btn{
+    background-color: #043988;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    margin: 50px auto 0;
+    width: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login_btn{
+    width: 200px;
+    border-radius: 15px;
+}
+
+/* register */
+#register,#menu{
+    background-image: url(../img/bg02.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+.register_logo{
+    width: 60%;
+    margin: auto;
+}
+.register{
+    margin-top: 30px;
+}
+.register_tips{
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    margin-top: 20px;
+}
+.register_tips a{
+    color: #fff;
+    text-decoration: underline
+}
+.checkbox{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+.checkbox input{
+    width: 15px;
+    margin: 0;
+    margin-top: 3px;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+.checkbox label{
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-left: 5px;
+}
+.checkbox label a{
+    color: #fff;
+    text-decoration: underline
+}
+/* 主頁 */
+.header{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.header_logo{
+    width: 30%;
+    margin: auto;
+}
+.header_title{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+.hamberger{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+.hamberger .bar{
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: .3s;
+}
+.hamberger .bar:nth-child(3){
+    width: 14px;
+}
+.hamberger.active .bar:nth-child(1){
+    transform: rotate(45deg) translateX(-1px);
+    transform-origin: left;
+}
+.hamberger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamberger.active .bar:nth-child(3){
+    width: 22px;
+    transform: rotate(-45deg) translateX(-1px);
+    transform-origin: left;
+}
+#home{
+    background-image: url(../img/svg/bubble04.svg);
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+}
+.status_bar{
+    width: 90%;
+    height: 70px;
+    border-radius: 10px;
+    border: solid 1px #4cb3dd;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.status:last-child{
+    width: 70%;
+    border-left: solid 1px #4cb3dd;
+}
+.status_title{
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.status .point{
+    color: #00aba7;
+    font-size: 30px;
+    font-weight: 600;
+}
+.status .point span{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 2px;
+    font-weight: 40;
+}
+.prize_count{
+    display: flex;
+    justify-content: space-evenly;
+}
+.prize_count .item{
+    text-align: center;
+    padding: 0 15px;
+    position: relative;
+    width: 33%;
+}
+.prize_count .item:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    background-color: #4cb3dd;
+    right: 0;
+    top: calc(50% - 8px);
+}
+.prize_count .item:last-child:after{
+    display: none;
+}
+.status_bar .prize{
+    font-size: 12px;
+    color: #fff;
+}
+.status_bar  .count{
+    color: #97c63a;
+    font-size: 20px;
+}
+.bottle{
+    margin: auto;
+    width: 270px;
+    margin-bottom: -30px;
+    position: relative;
+}
+.bottle:after{
+    /* content: ''; */
+    width: 375px;
+    max-width: 90vw;
+    height: 200px;
+    position: absolute;
+    background-image: url(../img/svg/bubble04.svg);
+    background-repeat: no-repeat;
+    left: -104px;
+    top: 0;
+}
+.main_wrapper{
+    width: 90%;
+    background-color: #eef4ff;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+}
+.home_table{
+    text-align: center;
+}
+.home_table table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.home_table th{
+    font-size: 16px;
+    color: #043988;
+    padding-bottom: 10px;    
+    background-color: #eef4ff;
+}
+.home_table td{
+    color: #054baa;
+    padding: 10px 0;
+}
+.home_table tr:nth-child(odd){
+    background-color: #dbe7ff;
+}
+.home_table table span{
+    display: block;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 12px;
+    width: 60%;
+    margin: auto;
+    padding: 4px 0;
+}
+.home_table .correct span{
+    background-color: #043988;
+}
+.home_table .incorrect span{
+    background-color: #ff0000;
+}
+.home_table .confirming span{
+    background-color: #00aba7;
+}
+.home_table select{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #043988;
+    font-weight: 900;
+}
+.btn_area{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.btn_area .btn{
+    margin: 0 5px;
+}
+/* 選擇登錄方式 */
+.home_choose .main_wrapper{
+    text-align: center;
+    padding: 35px;
+}
+.home_choose p{
+    color: #043988;
+    line-height: 1.3;
+    font-size: 21px;
+}
+.home_choose p:first-child{
+    font-size: 27px;
+}
+.home_choose .main_wrapper .btn{
+    background-color: #609de9;
+}
+/* 登錄發票 */
+#touroku{
+    position: relative;
+}
+#touroku .main_wrapper{
+    padding: 30px;
+    padding-top: 0;
+}
+.circle_title{
+    width: 250px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.invoice_item{
+    margin-bottom: 30px;
+    border-top: dashed 1px #609de9;
+    padding-top: 20px;
+}
+.invoice_item:first-child{
+    border-top: none;
+    padding-top: 0;
+}
+.touroku_input input{    
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
+    border: none;
+    /* border-bottom: solid 1px #000; */
+    padding: 10px 0 10px;
+    /* margin-bottom: 20px; */
+    color: #000;
+}
+.touroku_input input::placeholder{
+    color: #609de9;
+}
+.touroku_input-duo {
+    display: flex;
+    justify-content: space-between;
+}
+.touroku_input-duo div{
+    width: 40%;
+    margin: 0;
+}
+.touroku_input-duo div:first-child{
+    width: 50%;
+}
+.upload_btn, .reload_btn{
+    background-color: #609de9;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 17.5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 120px;
+    display: block;
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
+}
+.invoice_preview .upload_btn img{
+    width: 10px;
+    position: relative;
+    top: 3px;
+}
+.invoice_preview{
+    margin-top: 20px;
+    text-align: center;
+}
+.invoice_preview img{
+    width: 80%;
+}
+.reload_btn{
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
+}
+.reload_btn img{
+    width: 18px;
+    position: relative;
+    top: 5px;
+    left: 2px;
+}
+.addone{
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+}
+.addone .plus{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0 auto 5px;
+    color: #fff;
+    background-color: #4e9b8e;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.addone p{
+    color: #4e9b8e;
+    font-size: 13px;
+}
+/* 載具登錄 */
+.touroku2 .btn{
+    margin-top: 20px;
+}
+.touroku2 .search_btn{
+    margin-top: 30px;
+    background-color: #609de9;
+}
+#touroku .home_table{
+    margin-top: 50px;
+}
+#touroku .home_table td {
+    padding: 15px 0;
+}
+.forgotCode a{
+    color: #054baa;
+    text-decoration: underline;
+    font-size: 14px;
+}
+/* 登錄完成 */
+.bravo{
+    text-align: center;
+    color: #043988;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0 10px;
+}
+.success{
+    text-align: center;
+    color: #043988;
+    font-size: 17px;
+    border-bottom: dashed 2px #4e9b8e;
+    padding-bottom: 30px;
+}
+.success span{
+    font-size: 40px;
+    color: #4e9b8e;
+    font-weight: 500;
+}
+#touroku .touroku_fin .home_table{
+    margin-top: 20px;
+}
+#touroku .touroku_fin .home_table span{
+    color: #f00;
+}
+#touroku .touroku_fin .fin_note{
+    margin-top: 30px;
+    font-size: 14px;
+    text-indent: -9px;
+    margin-left: 9px;
+}
+/* 兌換獎品 */
+.currentP{
+    text-align: center;
+    font-size: 17px;
+    color: #333;
+    padding: 10px 0;
+}
+.currentP span{
+    color: #043988;
+    font-size: 40px;
+}
+.prize_list .item{
+    background-color: #dbe7ff;
+    border: dashed 2px #609de9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5px;
+    box-sizing: border-box;
+    margin: 20px 0 10px;
+}
+.prize_list .item.gray{
+    background-color: #eee;
+    border: none;
+    position: relative;
+}
+.prize_list .item.gray:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #fcfcfc;
+    opacity: .7;
+    top: 0;
+    left: 0;
+}
+.prize_pic{
+    background-color: #fff;
+    width: 87px;
+    height: 87px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prize_wallet .prize_pic{
+    display: block;
+    padding: 0;
+    overflow: hidden;
+}
+.prize_pic .wallet_list{
+    width: 262px;
+    display: flex;
+    position: relative;
+    animation: walletList 10s linear infinite;
+}
+@keyframes walletList{
+    0%{left: 0}
+    30%{left: 0}
+    33%{left:-87px}
+    63%{left:-87px}
+    66%{left:-174px}
+    98%{left:-174px}
+    100%{left:0}
+}
+.prize_pic .wallet_list div{
+    width: 87px;
+    height: 87px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prize_pic img{
+    height: 90%;
+    max-width: unset;
+}
+.prize_name{
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 25px;
+}
+.prize_name span{
+    color: #609de9;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+.prize_wallet .prize_name{
+    margin-bottom: 5px;
+}
+.prize_num{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-width: 180px;
+}
+.buy_count{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 15px;
+}
+.minus, .plus{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #4e9b8e;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 24px;
+}
+.prize_num input{
+    background-color: #fff;
+    border-radius: 6px;
+    width: 40px;
+    height: 30px;
+    border: none;
+    margin: 0 5px;
+    text-align: center;
+}
+.buy_subtotal{
+    font-size: 12px;
+    color: #333;
+    text-align: right;
+}
+.buy_subtotal p.subtotal{
+    font-size: 30px;
+    color: #4e9b8e;
+}
+.note{
+    color: #db2828;
+    font-size: 13px;
+}
+.note img{
+    width: 20px;
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#exchange{
+    position: relative;
+    display: none;
+}
+#exchange .step1{
+    padding-bottom: 150px;
+}
+.cart{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100VW;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+    z-index: 2;
+}
+.cart .total{
+    font-size: 12px;
+    color: #333;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.cart .total span{
+    font-size: 30px;
+    color: #043988;
+}
+.remainder{
+    width: 100px;
+    height: 25px;
+    border-radius: 12.5px;
+    background-color: #e7f6ff;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 20px;
+}
+/* step2 */
+.step2 .prize_list .item{
+    align-items: center;
+    justify-content: space-evenly;
+}
+.exchange_title{
+    color: #4e9b8e;
+    font-size: 21px;
+    letter-spacing: 1.2px;
+}
+.exchange_list p{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+.step2 .line{
+    width: 1px;
+    background-color: #333;
+    height: 30px;
+}
+.step2 .touroku_input input{
+    width: 90%;
+}
+.step2 .touroku_input input::placeholder{
+    font-size: 12px;
+}
+.step2 .note{
+    font-size: 12px;
+    text-align: center;
+}
+/* step3 */
+.gift{
+    width: 60px;
+    margin: 50px auto 30px;
+}
+.step3{
+    color: #043988;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.5;
+}
+.step3 .finish{
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+/* 兌換紀錄 */
+#record{
+    position: relative;
+}
+#record .main_wrapper{
+    padding-top: 0;
+}
+.record_list .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+}
+.record_list .date{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4e9b8e;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    margin-right: 30px;
+    flex-shrink: 0;
+    z-index: 2;
+}
+.record_list .detail{
+    background-color: #fff;
+    border-radius: 0 8px 8px 8px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 10px;
+}
+.record_list .detail:before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    border-top: solid 5px #fff;
+    border-right: solid 8px #fff;
+    border-bottom: solid 5px transparent;
+    border-left: solid 8px transparent;
+}
+.record_list .detail .info{
+    margin-bottom: 10px;
+}
+.record_list .detail p{
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5;
+}
+.record_list .detail .prize_record{
+    color: #00aba7;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.record_list{
+    position: relative;
+}
+.record_list:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-left: dashed 2px #4e9b8e;
+    left: 30px;
+    top: 0px;
+}
+/* menu */
+#menu{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    padding-top: 80px;
+    transition: .3s;
+}
+#menu.active{
+    right: 0;
+}
+.menu_wrapper{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+.tital_bar{
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+}
+.menu{
+    width: 140px;
+    margin: 35px auto;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    font-size: 27px;
+    text-align: center;
+    padding: 55px 0;
+}
+.menu p{
+    margin-bottom: 50px;
+    color: #fff;
+}
+.menu p:last-child{
+    margin-bottom: 0;
+}
+.menu p a{
+    color: #fff;
+}
+/* bubble */
+.bubble03{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 54px;
+}
+#login .bubble02{
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 70px;
+}
+.bubble01{
+    position: absolute;
+    width: 54px;
+    right: 0;
+    top: -50px;
+}
+.bubble02{
+    position: absolute;
+    top: -75px;
+    left: -15px;
+    width: 55px;
+}
+/* input */
+.touroku_input{
+    position: relative;
+}
+.touroku_input input{
+    padding-left: 90px;
+    box-sizing: border-box;
+}
+.label_short input{
+    padding-left: 65px;
+}
+.label{
+    position: relative;
+    margin-bottom: 20px !important;
+    border-bottom: solid 1px #000;
+}
+.label p{
+    position: absolute;
+    top: 13px;
+    left: 0;
+    color: #2c2c2c;
+}
+#exchange .label p{
+    left: 17px;
+}
+.date_select{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.date_select select{
+    background-color: transparent;
+    border: none;
+    display: block;
+    float: right;
+}
+.date_select select:focus{
+    outline: none
+}
+/* 忘記密碼 */
+#forget .main_wrapper{
+    padding: 0 30px 30px;
+}
+/* loading */
+.loading{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.loading img{
+    width: 100px;
+    margin-top: 200px;
+
+}
+/* recaptcha */
+.g-recaptcha{
+    margin-top: 30px;
+    transform: scale(.9)
+}
+
+#login,
+#register,
+#main,
+.home_choose,
+#touroku,
+.touroku1,
+.touroku2,
+.device_record,
+.touroku_fin,
+#exchange,
+.step1,
+.cart,
+.step2,
+.step3,
+#record,
+#forget{
+    display: none;
+}

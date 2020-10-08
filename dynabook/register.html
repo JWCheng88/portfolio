@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153505088-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-153505088-1', {'page_title':'register'});
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- favicon -->
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/m_style.css">
+  <link rel="stylesheet" href="css/form.css">
+  <title>dynabook 新誕生 - 產品註冊</title>
+</head>
+<body>
+  <div class="header header_register">
+    <div class="logo"><a href="/"><img src="images/svg/dynabook.svg" alt=""></a></div>
+  </div>
+  <div class="form register_form" id="app">
+    <div class="form_head">{{$t('title')}}</div>
+    <div class="form_body">
+      <p>{{$t('p1')}}<br><br>
+        {{$t('p2')}}</p>
+      <div class="form_area">
+        <div class="input-text_area">
+          <div class="input"><input type="text" :placeholder="$t('input1')" v-model="name"></div>
+          <div class="input"><input type="tel" :placeholder="$t('input2')" v-model="phone"></div>
+          <div class="input"><input type="text" :placeholder="$t('input3')" v-model="email"></div>
+          <div class="input input_long"><input type="text" placeholder="地址" v-model="address" maxlength="100"></div>
+          <div class="input"><input type="text" :placeholder="$t('input4')" v-model="product"></div>
+          <div class="input"><input type="text" :placeholder="$t('input5')" v-model="productID"></div>
+          <div class="input file-input">
+            <input type="file" accept="image/*" id="file" name="file" @change="upload">
+            <label for="file" class="file_label"><img src="images/svg/ic_upload.svg" alt=""><span>{{$t('upload')}}</span></label>
+          </div>
+          <!-- <div class="input"><input type="file" accept="image/*" id="file" onchange="fChange()"></div> -->
+        </div>
+        <div class="input-radio">
+          <input type="checkbox" name="private" id="private" v-model="agree">        
+          <label for="private" class="radio-label"></label>
+          <label for="private">{{$t('private1')}}<a href="https://asia.dynabook.com/pdf/Toshiba_disclaimers_footnotes.pdf" target="_blank">{{$t('private2')}}</a>{{$t('private3')}}</label>
+        </div>
+      </div>
+      <div class="submit" @click="submit" onclick="gtag('event', 'register_submit',{'event_label' : '產品註冊_點擊送出表單'})">{{$t('submit')}}</div>
+      <div class="amount">{{$t('amount')}}</div>
+      <p>{{$t('amount_p')}}</p>
+      <div class="require">
+        <ul>
+          <li>．{{$t('li1')}}</li>
+          <li>．{{$t('li2')}}</li>
+          <li>．{{$t('li3')}}</li>
+          <li>．{{$t('li4')}}</li>
+          <li>．{{$t('li5')}}</li>
+          <li>．{{$t('li6')}}</li>
+          <li>．{{$t('li7')}}</li>
+        </ul>
+      </div>
+      <p>{{$t('send1')}}<a href="mailto:ziv.chen@dbt.dynabook.com" style="border-bottom:solid 1px #333">{{$t('email')}}</a>{{$t('send2')}}</p>
+      <a href="https://asia.dynabook.com/cn/registeronline/Warranty_Format.xlsx" class="dl_form"><img src="images/svg/ic_download.svg" alt="">{{$t('dl')}}</a>
+      <p>{{$t('thankyou')}}</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>

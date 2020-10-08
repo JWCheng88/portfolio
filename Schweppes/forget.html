@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>舒味思</title>
+	
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>    
+	<div id="app">		
+		<div id="main">
+			<div class="wrapper">				
+				<!-- header -->
+				<div class="header">
+					<div class="header_logo">
+						<img src="img/svg/logo.svg" alt="">
+					</div>
+					<div class="header_title">
+						<img src="img/title.png" alt="">
+					</div>
+				</div>
+				<div id="forget">					
+					<div class="main_wrapper">
+						<div class="circle_title">
+							<img src="img/password.png" alt="">
+						</div>
+						<div class="gift">
+							<img src="img/svg/gift.svg" alt="">
+						</div>
+						<div class="touroku_input">
+							<div class="label">
+								<p>新密碼</p>
+								<input type="text" placeholder="請再輸入一次新密碼" class="recipient_name" v-model="password">
+							</div>
+							<div class="label">
+								<p>新密碼</p>
+								<input type="text" placeholder="請再輸入一次新密碼" class="recipient_name" v-model="repassword">
+							</div>
+						</div>
+						<div class="btn" @click="resetPassword">
+							確認送出
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+	new Vue({
+		el: "#app",
+		data: {
+			password: '',
+			repassword: '',
+			email: '',
+			token: ''
+		},
+		methods: {
+			resetPassword(){
+				var vm = this;
+				var forgetData = {
+					"email": vm.email,
+					"token": vm.token,
+					"password": vm.password,
+					"password_confirmation": vm.repassword
+				};
+				$.ajax({
+					method: 'POST',
+					url: 'https://2020schweppes.webgene.com.tw/api/auth/password/reset',
+					contentType: 'application/json; charset=utf-8',
+					data: JSON.stringify(forgetData),
+					success(r){
+						console.log(r)
+						alert('已成功變更密碼')
+						window.location.href='https://2020schweppes.webgene.com.tw/';
+					},
+					error(r){
+						console.log(r)
+						if(r.status==400){
+							alert('此連結已過期')
+							window.location.href='https://2020schweppes.webgene.com.tw/';
+						}else if(r.responseText=='{"password":["The password confirmation does not match."]}'){
+							alert('您兩次輸入的密碼不一致')
+						}
+					}
+				})
+			}
+		},
+		mounted(){
+			var vm = this;
+			var url = location.href;
+			if(url.indexOf('?')!=-1){
+				var ary = url.split('?')[1].split('&');//分割?後
+				//ary[0] = 'token=XXX'，ary[1] = 'email=OOO'
+				vm.token = ary[0].split('=')[1]
+				vm.email = ary[1].split('=')[1]
+			}
+		}
+	})
+</script>
+
+<script>
+	$('#main').show()
+	$('#forget').show()
+</script>
+
+</html>

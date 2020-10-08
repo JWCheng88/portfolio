@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149919035-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149919035-1', {'page_title':'lottery_start'});
+</script>
+  <meta charset="UTF-8">
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- facebook share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="⭐華航線上旅展⭐買機票抽百萬豪哩" />
+  <meta property="og:description" content="全航線促銷優惠中" />
+  <meta property="og:image" content="https://2019itfchinaairlines.com.tw/img/fb_share.jpg" />
+  <meta property="og:url" content="https://2019itfchinaairlines.com.tw/" />
+  <!-- favicon -->
+  <link rel="icon" href="img/favicon.ico">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/Capsule01.js?1570505444544"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/m_css_layout.css">
+  <title>⭐華航線上旅展⭐買機票抽百萬豪哩</title>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init(res) {
+	resultCr = res
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
+  var comp=AdobeAn.getComposition("69314D3E995AD9418914D753E0239234");
+  var lib=comp.getLibrary();
+  var loader = new createjs.LoadQueue(false);
+  loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+  loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+  var lib=comp.getLibrary();
+  loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+  var images=comp.getImages();	
+  if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  var lib=comp.getLibrary();
+  var ss=comp.getSpriteSheet();
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for(i=0; i<ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+  }
+  exportRoot = new lib.Capsule01();
+  stage = new lib.Stage(canvas);
+  stage.addChild(exportRoot);	
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+    // exportRoot.stop();
+  }	    
+  //Code to support hidpi screens and responsive scaling.
+  function makeResponsive(isResp, respDim, isScale, scaleType) {		
+    var lastW, lastH, lastS=1;		
+    window.addEventListener('resize', resizeCanvas);		
+    resizeCanvas();		
+    function resizeCanvas() {			
+      var w = lib.properties.width, h = lib.properties.height;			
+      var iw = window.innerWidth, ih=window.innerHeight;			
+      var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+      if(isResp) {                
+        if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+          sRatio = lastS;                
+        }				
+        else if(!isScale) {					
+          if(iw<w || ih<h)						
+            sRatio = Math.min(xRatio, yRatio);				
+        }				
+        else if(scaleType==1) {					
+          sRatio = Math.min(xRatio, yRatio);				
+        }				
+        else if(scaleType==2) {					
+          sRatio = Math.max(xRatio, yRatio);				
+        }			
+      }			
+      canvas.width = w*pRatio*sRatio;			
+      canvas.height = h*pRatio*sRatio;
+      canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+      canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+      stage.scaleX = pRatio*sRatio;			
+      stage.scaleY = pRatio*sRatio;			
+      lastW = iw; lastH = ih; lastS = sRatio;		
+    }
+  }
+  makeResponsive(false,'both',false,1);	
+  AdobeAn.compositionLoaded(lib.properties.id);
+  fnStartAnimation();
+}
+
+</script>
+</head>
+<body>
+<div class="wrapper game_wrapper" id="app">
+  <header>
+    <a href="/" class="logo" onclick="gtag('event', 'index_logo',{'event_label' : '首頁-左上角選單按鈕'})">
+      <img src="img/svg/logo.svg" alt="">
+      <img src="img/svg/logo02.svg" alt="" class="m_logo">
+    </a>
+    <div class="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul class="menu">
+        <li><a href="index.html#million" onclick="gtag('event', 'navigation_ticket',{'event_label' : '  百萬豪哩遊世界'})">百萬豪哩遊世界</a></li>
+        <li><a href="index.html#gacha" onclick="gtag('event', 'navigation_lottery',{'event_label' : '  會員扭扭樂'})">會員扭扭樂</a></li>
+        <li><a href="index.html#waypoint" onclick="gtag('event', 'navigation_promotion',{'event_label' : '優惠機票'})">優惠機票</a></li>
+        <li><a href="index.html#group" onclick="gtag('event', 'navigation_group',{'event_label' : '團體享好康'})">團體享好康</a></li>
+        <li><a href="guide.html" onclick="gtag('event', 'navigation_terms_conditions',{'event_label' : '活動辦法'})">活動辦法</a></li>
+        <li><a href="award.html" onclick="gtag('event', 'navigation_award',{'event_label' : '得獎名單'})">得獎名單</a></li>
+        <!-- <li><a href="" onclick="gtag('event', 'navigation_program_list',{'event_label' : '旅展活動時間表'})">旅展活動時間表</a></li> -->
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </header>
+  <section class="game">
+    <h1><img src="img/svg/game_title.svg" alt=""></h1>
+    <div class="gacha_area">
+      <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:950px; height:950px">
+        <canvas id="canvas" width="950" height="950" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
+        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:950px; height:950px; position: absolute; left: 0px; top: 0px; display: block;">
+        </div>
+      </div>
+      <div class="machine">
+        <img src="img/Capsule010001.png" alt="">
+      </div>
+    </div>
+    <img src="img/cloud01.png" alt="" class="game_cloud1">
+    <img src="img/cloud02.png" alt="" class="game_cloud2">
+    <img src="img/cloud03.png" alt="" class="game_cloud3">
+    <img src="img/game_2man.png" alt="" class="twomen">
+    <img src="img/game_ball04.png" alt="" class="game_egg1">
+    <img src="img/game_ball03.png" alt="" class="game_egg2">
+    <!-- <img class="egg" src="images/Capsule2.png" alt=""> -->
+    <a href="" class="playGacha" @click.prevent="playGacha" onclick="gtag('event', 'lottery_start_play',{'event_label' : '開始玩Play'})">PLAY</a>
+    <div class="result">
+      <img :src="result.src" alt="" class="girl">
+      <div class="result_text">
+        <p v-if="result.prize=='1' || result.prize=='2'">恭喜你獲得<br><span class="miles">{{result.miles}}</span><span class="circle">哩</span><br><span class="smalltext">請參考得獎名單公告為準</span></p>
+        <p v-if="result.prize=='3'">感謝參加，別氣餒!<br><span class="fail">購票還有機會<span class="pink">抽大獎</span>哦</span></p>
+      </div>
+      <div class="btnarea">
+        <a href="index.html#waypoint" class="btn" onclick="gtag('event', 'lottery_done_promotion',{'event_label' : '左按鈕：旅展優惠'})">優惠機票</a>
+        <a href="index.html#million" class="btn" onclick="gtag('event', 'lottery_done_goticket',{'event_label' : '右按鈕：登錄立即抽'})">購票登錄抽大獎</a>
+      </div>
+    </div>
+  </section>
+  <!-- <footer>
+    <p>版權所有 © 中華航空股份有限公司 2019</p>
+  </footer> -->
+</div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vuejs-datepicker"></script>
+<script src="js/app.js"></script>
+<script>
+var y = window.scrollY
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    $('header').css('background-color','#93c9de')
+  } else {
+    $('header').css('background','none')
+  }
+}
+
+</script>

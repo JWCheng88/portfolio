@@ -1,0 +1,55 @@
+/* .page-enter-active,
+.page-leave-active {
+	transition: opacity .5s;
+}
+
+.page-enter,
+.page-leave-to {
+	opacity: 0;
+} */
+
+/* SweetAlert2 */
+
+/* style.css 被縮小 於是放大 */
+
+.swal2-popup.swal2-modal.swal2-show {
+	font-size: 75%;
+}
+
+/* 放大 text */
+
+.swal2-popup #swal2-content {
+	font-size: 150%;
+}
+
+/* 往上移一些 */
+
+.swal2-container.swal2-center.swal2-fade.swal2-shown {
+	padding-bottom: 100px;
+}
+
+/* 對齊 */
+
+h2#swal2-title {
+	text-align: justify;
+}
+
+/* 確認按鈕顏色 */
+
+div.swal2-popup button.swal2-styled.swal2-confirm {
+	background-color: #b88b01;
+}
+
+.trans_bg {
+	z-index: 1000;
+}
+
+/* 兩條滾軸 scrollbar */
+/* https://stackoverflow.com/questions/9866220/why-are-two-vertical-scrollbars-showing */
+/* https://stackoverflow.com/questions/18041501/double-browser-scroll-bar-w-overflow-hidden */
+/* 回復成預設 */
+html{
+    overflow-x: initial !important;
+}
+
+

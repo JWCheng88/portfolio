@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>司法院：國民法官制度</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="animate.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="mobile.css">
+	<script src="createjs-2015.11.26.min.js"></script>
+<script src="title.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("B250FA381CE8224AB50456BB8BD844E5");
+	var lib=comp.getLibrary();
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.title();
+	stage = new lib.Stage(canvas);
+	stage.addChild(exportRoot);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(true,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+</head>
+<body onload="init();">
+	<nav>
+		<div class="logo"><img src="img/logo_black.png"></div>
+		<div class="menu">
+			<div class="menu_bar"></div>
+			<div class="menu_bar"></div>
+			<div class="menu_bar"></div>
+		</div>
+		<ul>
+			<li><a href="#section2">國民法官制度</a></li>
+			<li><a href="#section4">誰可以當國民法官</a></li>
+			<li><a href="#section7">國民法官怎麼選</a></li>
+			<li><a href="#section3">國民法官的保障與權利</a></li>
+			<li><a href="#section3-1">國民法官要做哪些事</a></li>
+			<li><a href="#section3-2">參與審理的案件</a></li>
+			<li><a href="#section5">審判流程</a></li>
+			<li><a href="#section6">怎麼形成判決</a></li>
+		</ul>
+		<div class="blackBG"></div>
+	</nav>
+	<div class="scroll_area">
+		<div class="scroll">Scroll</div>
+		<div class="menu_dots_area">
+			<div class="menu_dots"><a href="#section2"></a></div>
+			<div class="menu_dots"><a href="#section4"></a></div>
+			<div class="menu_dots"><a href="#section7"></a></div>
+			<div class="menu_dots"><a href="#section3"></a></div>
+			<div class="menu_dots"><a href="#section3-1"></a></div>
+			<div class="menu_dots"><a href="#section3-2"></a></div>
+			<div class="menu_dots"><a href="#section5"></a></div>
+			<div class="menu_dots"><a href="#section6"></a></div>
+		</div>
+	</div>
+	<div class="totop">
+		<img src="img/svg/top.svg" alt="">
+	</div>
+	<section id="section1">
+		<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:580px; height:420px">
+			<canvas id="canvas" width="580" height="420" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+			<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:580px; height:420px; position: absolute; left: 0px; top: 0px; display: block;">
+			</div>
+		</div>
+	</section>
+	<section id="section2">
+		<div class="container">
+			<div class="what">
+				<div class="what_text" data-wow-offset="330">
+					<h2 class="" data-wow-offset="330">
+						<span>什麼是國民法官制度？</span>
+					</h2>
+					<h3 class="wow fadeInLeft" data-wow-offset="330">將國民多元的視野與經驗納入審判中，幫助司法判決更全面。	</h3>
+					<p class="yr wow fadeInLeft" data-wow-offset="330">國民法官制度，就是由一群來自各行各業的民眾，與法官一起坐在法檯上，共同審判的制度。<br><br>
+						國民法官雖然沒有審判的專業，但可以把不同的生活經驗、價值思考、法律感情，帶進法庭。藉著國民法官的參與，可以讓司法審判更透明，讓司法專業與外界對話，彼此交流與反思，藉此促進國民與法院間的相互理解。</p>
+				</div>
+				<div class="what_img">
+					<div class="backblock"></div>
+					<img src="img/tree.png" class="" data-wow-offset="700">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section4">
+		<h1>國民法官選任程序</h1>
+		<div class="container">
+			<h2>
+				<span>誰可以當國民法官？</span> 
+				<img src="img/svg/3job.svg" alt="">
+			</h2>
+			<h3>
+				三種資格，六種不能<br>
+				<span>維持審判公正，保障國民法官及當事人的權益</span>
+			</h3>
+		</div>
+		<div class="who_slide">
+			<div class="slide_container">
+				<div class="slide slide1">
+					<div class="container">
+						<div class="who_slide_title"><span>“</span>符合「三種」基本資格就有機會擔任國民法官</div>
+						<div class="who_3item">
+							<div class="item3">年滿<span class="yellow">23</span>歲</div>
+							<div class="item3">具有<br><span class="yellow">中華民國國籍</span><br>的國民</div>
+							<div class="item3">在「地方法院管轄區域」連續居住滿<span class="yellow">4個月</span>以上<br><span class="sub">*例如臺灣嘉義地方法院的管轄區域為嘉義市與嘉義縣。</span></div>
+						</div>
+					</div>
+					<div class="six">
+						<img src="img/svg/3.svg" alt="">
+					</div>
+				</div>
+				<div class="slide slide2">
+					<div class="container">
+						<div class="who_slide_title"><span>“</span>但有「六種」情況，不能擔任國民法官</div>
+						<img src="img/no.jpg" alt="" class="goddess">
+						<div class="who_6item">
+							<div class="who_6item_area">
+								<div class="item6">
+									<div class="icon">
+										<img src="img/svg/icon_handcuffs.svg" alt="">
+									</div>
+									<div class="title">自身因素</div>
+									<div class="text">現涉刑案未滿一定期間、或被褫奪公權者。</div>
+								</div>
+								<div class="item6">
+									<div class="icon">
+										<img src="img/svg/icon_man.svg" alt="">
+									</div>
+									<div class="title">身心因素</div>
+									<div class="text">身心狀況不足以勝任職務者。</div>
+								</div>
+								<div class="item6">
+									<div class="icon">
+										<img src="img/svg/icon_book.svg" alt="">
+									</div>
+									<div class="title">教育門檻</div>
+									<div class="text">未完成國民教育者。</div>
+								</div>
+								<div class="item6">
+									<div class="icon">
+										<img src="img/svg/icon_relate.svg" alt="">
+									</div>
+									<div class="title">案件有關</div>
+									<div class="text">與本案或本案被告、被害人有一定關係者。</div>
+								</div>
+								<div class="item6">
+									<div class="icon">
+										<img src="img/svg/icon_unfair.svg" alt="">
+									</div>
+									<div class="title">不能公平</div>
+									<div class="text">有事證難以公平審判的人等。</div>
+								</div>
+								<div class="item6">
+									<div class="icon">
+										<img src="img/svg/icon_job.svg" alt="">
+									</div>
+									<div class="title">職業因素</div>
+									<div class="text">具有法政軍警等特殊職業背景的人等。</div>
+								</div>
+							</div>
+						</div>
+						<div class="three">
+							<img src="img/svg/6.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section7">
+		<!-- <img src="img/group.jpg" alt="" class="hand"> -->
+		<div class="container">
+			<h2>
+				<span>國民法官怎麼選？</span>
+			</h2>
+			<h3>
+				過四關，層層抽選選出最公正的國民法官<br>
+				<span>年齡、職業、身分、在戶籍地的居住時間，<br>
+				都會成為評選國民法官適不適任的標準，<br>
+				除了隨機抽選以外，還要確定有擔任國民法官<br>
+				的資格，以及沒有不能擔任國民法官的情形。</span>
+			</h3>
+			<div class="group">
+				<img src="img/group.jpg" alt="">
+			</div>
+			<div class="step step1">
+				<div class="circle_area">
+					<div class="circle active">
+						<p>初選名冊</p>
+					</div>
+					<div class="circle">
+						<p>複選名冊</p>
+					</div>
+					<div class="circle">
+						<p>候選<br>國民法官</p>
+					</div>
+					<div class="circle">
+						<p>國民法官<br>產生</p>
+					</div>
+				</div>
+				<div class="square_area">
+					<div class="square square1 active">
+						<ul>
+							<li>隨機抽選</li>
+							<li>提出符合條件的國民法官初選名冊。</li>
+						</ul>
+					</div>
+					<div class="square square2">
+						<ul>
+							<li>組成審核小組</li>
+							<li>排除「不符法定資格」的情形。</li>
+							<li>通知合格之國民，次年度可能擔任國民法官。</li>
+						</ul>
+					</div>
+					<div class="square square3">
+						<ul>
+							<li>受理案件後，從複選名冊中隨機抽選一定數量之候選國民法官（例如50名）。</li>
+							<li>通知選任期日到庭（表明不具資格或有正當理由拒絕參與者，可不到庭）。</li>
+						</ul>
+					</div>
+					<div class="square square4">
+						<div class="title">於選任期日進行詢問</div>
+						<div class="result">
+							<span>結果一</span> 不符資格 <img src="img/svg/boom_no.svg" alt="">
+						</div>
+						<div class="result">
+							<span>結果二</span> 符合資格但有權拒絕者拒絕擔任 <img src="img/svg/boom_no.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section3">
+		<h2>
+			<span>國民法官的保障與權利</span>
+			<img src="img/svg/fist.svg" alt="">
+		</h2>
+		<div class="work_slide">
+			<div class="slide_container">
+				<div class="slide slide3">
+					<div class="work_slide_img wow fadeInLeft" data-wow-offset="330">
+						<img src="img/im03.jpg" alt="">
+					</div>
+					<div class="work_slide_text wow fadeInRight" data-wow-offset="330">
+						<ul>
+							<li>
+								<div class="num">1</div>
+								<p>國民法官將受到充分保護</p>
+							</li>
+							<li>
+								保護
+								<p>國民法官與備位國民法官，都能得到必要的保護措施。</p>
+							</li>
+							<li>
+								保密
+								<p>任何人不得揭露國民法官、備位國民法官、候選國民法官的個人資料。</p>
+							</li>
+							<li>
+								安全
+								<p>對國民法官犯罪，加重其刑二分之一。</p>
+							</li>
+							<li>
+								公假
+								<p>給予公假，雇主不能做出任何職務上的不利處分。</p>
+							</li>
+							<li>
+								補貼
+								<p>按照到庭日數，給予日費、旅費、相關必要費用。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="slide slide2">
+					<div class="work_slide_text wow fadeInLeft" data-wow-offset="330">
+						<ul>
+							<li>
+								<div class="num">2</div>
+								<p>國民法官行使職權將受到保障</p>
+							</li>
+							<li>
+								獨立
+								<p>國民法官依據法律獨立行使職權，不受任何干涉，除法律另有規定外，職權與法官相同。</p>
+							</li>
+							<li>
+								公正
+								<p>向國民法官行賄，處1年以上7年以下有期徒刑，得併科新臺幣100萬元以下罰金。</p>
+							</li>
+							<li>
+								照料
+								<p>確保國民法官能理解審理過程、自主陳述意見、充分討論及獨立判斷。</p>
+							</li>
+						</ul>
+					</div>
+					<div class="work_slide_img wow fadeInRight" data-wow-offset="330">
+						<img src="img/im02.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section3-1">		
+		<h1>國民法官審理程序</h1>
+		<h2>
+			<span>國民法官要做哪些事？</span>
+		</h2>
+		<h3>我能擔任好國民法官嗎？</h3>
+		<div class="work_slide">
+			<div class="slide_container">
+				<div class="slide slide1">
+					<div class="work_slide_img wow fadeInLeft" data-wow-offset="330">
+						<img src="img/im01.jpg" alt="">
+					</div>
+					<div class="work_slide_text wow fadeInRight" data-wow-offset="330">
+						<ul>
+							<li>
+								審理
+								<p>與法官一起坐在法檯上，全程參與審判程序。</p>
+							</li>
+							<li>
+								訊問
+								<p>可以補充訊問或詢問被告、被害人、證人、鑑定人。</p>
+							</li>
+							<li>
+								定罪
+								<p>與法官共同決定有沒有罪、應判何罪。</p>
+							</li>
+							<li>
+								量刑
+								<p>與法官共同決定有罪時的刑度輕重。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section3-2">
+		<h2>
+			<span>參與審理的案件</span>
+		</h2>
+		<h3>我能擔任好國民法官嗎？</h3>
+		<div class="work_slide">
+			<div class="slide_container">
+				<div class="slide slide4">
+					<div class="work_slide_text wow fadeInLeft" data-wow-offset="330">
+						<div class="slide4title">國民法官會參與什麼案件的審判？</div>
+						<div>
+							<p>•  最輕本刑10年以上有期徒刑之罪</p>
+							<p>•  其他故意犯罪因而發生死亡結果之罪</p>
+							<p>•  除外：少年刑事案件與毒品危害防制條例案件</p>
+						</div>
+						<div class="hammer">
+							<img src="img/svg/mallet.svg" alt="" class="mallet">
+							<img src="img/svg/plate.svg" alt="" class="plate">
+						</div>
+					</div>
+					<div class="work_slide_img wow fadeInRight" data-wow-offset="330">
+						<img src="img/im04.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section5">
+		<h2>
+			<span>審判流程</span>
+		</h2>
+		<h3>
+			國民法官平常心，一步一步來<br>
+			<span>法院做好準備，幫助國民法官清楚知道必須進行的事</span>
+		</h3>
+		<div class="section5_wrapper">
+			<div class="section5_img1 stick">
+				<img src="img/mallet_all.png" alt="" class="">
+			</div>
+			<div class="map_area">
+				<div class="map_head">
+					<div class="map_head_img">
+						<img src="img/svg/icon_libra.svg" alt="" style="width:80%">
+					</div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					準備程序
+					<div class="map_detail">案件正式審理前，整理爭點，檢察官及辯護人聲請調查證據，法院擬定審理計畫，預估所需審理天數</div>
+				</div>
+				<div class="map_item wow fadeInUp mt60" data-wow-offset="200">
+					選任程序
+					<div class="map_detail">選出參與審判的國民法官</div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					宣誓
+					<div class="map_detail">國民法官表明會依法公正、誠實的審理案件<br><span class="yellowback">【國民法官任務開始】</span></div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					審前說明
+					<div class="map_detail">由審判長向國民法官說明法律原則及審判程序</div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					審判開始
+					<div class="map_detail">由書記官朗讀案由、檢察官陳述起訴要旨、<br class="xsbr">審判長權利告知</div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					開審陳述
+					<div class="map_detail">由檢察官及辯護人說明會用什麼證據證明各自的主張</div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					當事人自主<br>調查證據
+					<div class="map_detail">由檢察官及辯護人在法庭內展現可證明自己主張的證據（證人、鑑定人、書證、物證）</div>
+				</div>
+				<!-- <div class="map_item">
+					中間討論
+					<div class="map_detail">審理中，必要時可以跟法官進行討論，解除疑惑</div>
+				</div> -->
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					言詞辯論
+					<div class="map_detail">檢察官、辯護人分別辯論被告有沒有罪、犯什麼罪、要判多重的刑。被害人或其家屬陳述意見，被告最後陳述後辯論終結</div>
+				</div>
+				<div class="map_item wow fadeInUp mt60" data-wow-offset="200">
+					終局評議
+					<div class="map_detail">國民法官與法官共同討論後作成判決</div>
+				</div>
+				<div class="map_item wow fadeInUp" data-wow-offset="200">
+					宣示判決
+					<div class="map_detail"><span class="yellowback">【國民法官任務結束】</span></div>
+				</div>
+				<div class="map_head">
+					<div class="map_head_img">
+						<img src="img/svg/icon_mallet.svg" alt="" style="width:65%">
+					</div>
+				</div>
+			</div>
+			<div class="section5_img2">
+				<img src="img/lawbook.png" alt="">
+			</div>
+		</div>
+	</section>
+	<div class="triangle"></div>
+	<section id="section6">
+		<h2>
+			<span>怎麼形成判決</span>
+		</h2>
+		<h3>你的參與很重要<br><span>因爲沒有國民法官與法官雙方的同意，不能判一個人有罪。</span></h3>
+		<div class="block block1 wow fadeInLeft">
+			<div class="how_title">
+				哪些人參與判決的決定？總共幾人？
+				<div class="sub">總共有9人：<span class="yellow">6</span>位國民法官 + <span class="yellow">3</span>位法官。</div>
+				<img src="img/svg/youcanhelp.svg" alt="" class="youcanhelp">
+			</div>
+		</div>
+		<div class="block block2 wow fadeInRight">
+			<div class="how_title">
+				有罪？無罪？誰來決定？
+				<div class="sub">有罪要有6票以上同意，國民法官與法官雙方都要有同意票。</div>
+			</div>
+			<img src="img/svg/legal03.svg" alt="" class="voting">
+			<img src="img/lawyer.jpg" alt="" class="write">
+		</div>
+		<div class="block block1 block3 wow fadeInLeft">
+			<div class="how_title">
+				判重？判輕？如何決定？
+				<div class="sub">量刑(死刑以外)：要有5票以上同意<br>
+					死刑：要有6票以上同意<br>
+					以上國民法官與法官雙方都要有同意票。</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="block block4 wow fadeInUp">
+			<img src="img/svg/slogan.svg" alt="">
+			<!-- <div class="how_title">如果有最重、次重、最輕三種刑度，<br>但沒有任何一種得到5票以上的同意票呢？</div>
+			<div class="ex">例如 : 經過國民法官和專業法官投票後，出現下列三種刑度：</div>
+			<div class="jugdement">
+				<div class="jug2">
+					<div class="dashed">
+						<div class="item">
+							<p>最重判刑 8年</p>
+							<div class="vote">2票</div>
+						</div>
+						<div class="item">
+							<p>最重判刑 7年</p>
+							<div class="vote">4票</div>
+							<img src="img/svg/boom_mallet.svg" alt="" class="boom_mallet">
+						</div>
+					</div>
+					<div class="over5">
+						最重+次重票數 <span class="yellow">> 5</span>
+					</div>
+				</div>
+				<div class="jug1">
+					<div class="item">
+						<p>最重判刑 7年</p>
+						<div class="vote">4票</div>
+					</div>
+				</div>
+			</div>
+			<div class="star">*會將「最重」與「次重」的票數相加，若有5票以上的同意票，就以「次重」刑度為最後決定。<br>
+				<span class="blue">最重2票 + 次重4票 = 6票  →  超過5票 →  以「次重判刑7年」為最終刑度</span></div> -->
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="footer-l">
+				<img src="img/logo.png" alt="">
+				<div>
+					10048臺北市中正區重慶南路一段124號<br>
+					02- 23618577
+				</div>
+			</div>
+			<div class="footer-r">
+				© 2020 司法院 版權所有<br>
+				<span class="ad">廣告</span>
+			</div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery.scrollbar.min.js"></script>
+<script type="text/javascript" src="slick.min.js"></script>
+<script type="text/javascript" src="wow.js"></script>
+<script>
+new WOW().init();
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+    
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('nav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top-90 <= scrollPos && refElement.position().top + refElement.height() +90 > scrollPos) {
+            $('nav ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+    $('.menu_dots_area a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top-90 <= scrollPos && refElement.position().top + refElement.height() +90 > scrollPos) {
+            $('.menu_dots_area a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+	});	
+	$('h2').each(function(){
+		var title = $(this)
+		var windowH = window.innerHeight
+		if (title.position().top <= scrollPos+windowH-300){
+			title.addClass('start')
+			setTimeout(function(){
+				title.addClass('over')
+			},550)
+		}
+	})
+}
+
+	$('.dot').click(function(){
+		var self = $(this);
+		var index = $(this).index()
+		var square = $('.square')
+		var circle = $('.circle')
+		var step = $('.step')
+		var cirIndex = index+1
+		if (circle.eq(index).hasClass('active')){
+			return false
+		}else{
+			self.addClass('active').siblings().removeClass('active')
+			step.animate({opacity: 0},200, function(){
+				square.removeClass('active')
+				square.eq(index).addClass('active')
+				circle.removeClass('active')
+				circle.eq(index).addClass('active')
+				step.removeClass('step1')
+				step.removeClass('step2')
+				step.removeClass('step3')
+				step.removeClass('step4')
+				step.removeClass('step5')
+				step.addClass('step'+cirIndex)
+				step.animate({opacity:1},100)
+			})	
+		}
+	})
+	// if (window.innerWidth > 1024){		
+		$('.circle').click(function(){
+			var self = $(this);
+			var index = $(this).index()
+			var square = $('.square')
+			var circle = $('.circle')
+			var step = $('.step')
+			var dot = $('.dot')
+			var cirIndex = index+1
+			if (self.hasClass('active')){
+				return false
+			}else{
+				step.animate({opacity: 0},200, function(){
+					square.removeClass('active')
+					square.eq(index).addClass('active')
+					circle.removeClass('active')
+					circle.eq(index).addClass('active')
+					dot.removeClass('active')
+					dot.eq(index).addClass('active')
+					self.addClass('active').siblings().removeClass('active')
+					step.animate({opacity:1},100)
+				})		
+			}		
+		})
+	// }
+
+//totop
+$('.totop').click(function(){
+	$('html, body').animate({scrollTop:0}, 800);
+})
+function scrollFunction() {
+	var y = window.scrollY
+	var h = window.innerHeight*0.5;
+	if (y > h){
+		$('.totop').addClass('show')
+		$('.menu_dots_area').addClass('show')
+		$('.scroll').addClass('hide')
+	}else{
+		$('.totop').removeClass('show')
+		$('.menu_dots_area').removeClass('show')
+		$('.scroll').removeClass('hide')
+	}
+}
+window.addEventListener('scroll',function() {scrollFunction()});
+
+$('.menu').click(function(){
+	let menu = $(this);
+	if(!menu.hasClass('active')){
+		menu.addClass('active')
+		$('nav ul').addClass('active')
+		$('.blackBG').addClass('active')
+	}else{
+		menu.removeClass('active')
+		$('nav ul').removeClass('active')
+		$('.blackBG').removeClass('active')
+	}	
+})
+$('nav ul li a').click(function(){
+		$('.menu').removeClass('active')
+		$('nav ul').removeClass('active')
+		$('.blackBG').removeClass('active')
+})
+
+
+$(document).ready(function(){
+	var w = window.innerWidth
+	var w50 = w/2
+	var handR = w50-600
+	if (w>1880){
+		$('.hand').css({'right':'calc(50% + '+handR+'px)'})
+	}else{
+		$('.hand').css({'right':'calc(50% + 340px)'})
+	}
+	
+})
+
+</script>
+</html>

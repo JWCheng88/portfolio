@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153505088-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-153505088-1', {'page_title':'contact'});
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- favicon -->
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/m_style.css">
+  <link rel="stylesheet" href="css/form.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <title>dynabook 新誕生 - 我有興趣</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><a href="/"><img src="images/svg/dynabook.svg" alt=""></a></div>
+  </div>
+  <div class="form" id="app">
+    <div class="form_head">{{$t('title')}}</div>
+    <div class="form_body">
+      <p>{{$t('p1')}}<br>
+        {{$t('p2')}}</p>
+      <div class="form_area">
+        <div class="input-text_area">
+          <div class="input"><input type="text" :placeholder="$t('input1')" v-model="product"></div>
+          <div class="input"><input type="text" :placeholder="$t('input2')" v-model="name"></div>
+          <div class="input"><input type="tel" :placeholder="$t('input3')" v-model="phone"></div>
+          <div class="input"><input type="text" :placeholder="$t('input4')" v-model="email"></div>
+        </div>
+        <div class="input-radio usage">
+          <!-- <span>用途</span> -->
+          <input type="radio" name="usage" id="home" value="home" v-model="usage">        
+          <label for="home" class="radio-label"></label>
+          <label for="home">{{$t('home')}}</label>
+          <br class="xs">
+          <input type="radio" name="usage" id="business" value="business" v-model="usage">        
+          <label for="business" class="radio-label"></label>
+          <label for="business">{{$t('pro')}}</label>
+        </div>
+        <div class="input_textarea message">
+          <!-- <span>留言</span> -->
+          <textarea name="" id="" cols="" rows="" v-model="message"></textarea>
+        </div>
+        <div class="input-radio">
+          <input type="checkbox" name="private" id="private" v-model="agree">        
+          <label for="private" class="radio-label"></label>
+          <label for="private">{{$t('private1')}}<a href="https://asia.dynabook.com/pdf/Toshiba_disclaimers_footnotes.pdf" target="_blank">{{$t('private2')}}</a>{{$t('private3')}}</label>
+        </div>
+      </div>
+      <div class="submit" @click="submit" onclick="gtag('event', 'contact_submit',{'event_label' : '我有興趣_點擊送出表單'})">{{$t('submit')}}</div>
+    </div>
+  </div>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>  
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/intrest.js"></script>
+</body>
+
+</html>

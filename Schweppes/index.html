@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>舒味思®風格出走集點送</title>
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '228679128146632');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=228679128146632&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->	
+
+<!-- LINE Tag Base Code -->
+<!-- Do Not Modify -->
+<script>
+(function(g,d,o){
+g._ltq=g._ltq||[];g._lt=g._lt||function(){g._ltq.push(arguments)};
+var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+var s=d.createElement('script');s.async=1;
+s.src=o||h+'/n/line_tag/public/release/v1/lt.js';
+var t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+})(window, document);
+_lt('init', {
+customerType: 'lap',
+tagId: 'ea9a6ea3-fbef-4203-8dfd-ff37c22297a4'
+});
+_lt('send', 'pv', ['ea9a6ea3-fbef-4203-8dfd-ff37c22297a4']);
+_lt('send', 'cv', {
+	type: 'event_page'
+},['ea9a6ea3-fbef-4203-8dfd-ff37c22297a4']);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" src="https://tr.line.me/tag.gif?c_t=lap&t_id=ea9a6ea3-fbef-4203-8dfd-ff37c22297a4&e=pv&noscript=1" />
+</noscript>
+<!-- End LINE Tag Base Code -->
+
+<!-- 
+Start of global snippet: Please do not remove
+Place this snippet between the <head> and </head> tags on every page of your site.
+-->
+<!-- Global site tag (gtag.js) - Google Marketing Platform -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-9087352"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'DC-9087352');
+</script>
+<!-- End of global snippet: Please do not remove -->
+<!--
+Event snippet for SCTW100679_Schweppes OND20_REM_SiteVisitor on : Please do not remove.
+Place this snippet on pages with events you’re tracking. 
+Creation date: 09/07/2020
+-->
+<script>
+gtag('event', 'conversion', {
+'allow_custom_scripts': true,
+'send_to': 'DC-9087352/invmedia/sctw1003+standard'
+});
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=9087352;type=invmedia;cat=sctw1003;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77248071-6"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-77248071-6');
+</script>
+</head>
+<body>
+	<div id="app">
+		<!-- 登入 -->
+		<div id="login">
+			<div class="wrapper">
+				<div class="login_logo">
+					<img src="img/svg/logo.svg" alt="">
+				</div>
+				<div class="login">
+					<div class="circle">
+						<div class="login_title">
+							<img src="img/title.png" alt="">
+							<img src="img/titlebar_blue.png" alt="">
+						</div>
+						<div class="login_area">
+							<input type="text" placeholder="Email" v-model="login.email">
+							<input type="password" placeholder="輸入密碼" v-model="login.password">
+						</div>
+						<div class="login_bottom">
+							<div @click="toForget">忘記密碼</div>
+							<div @click="toRegister">註冊</div>
+						</div>
+					</div>
+					<div class="btn login_btn" @click='handleLogin'>
+						登入
+					</div>
+				</div>
+				<img src="img/svg/bubble02.svg" alt="" class="bubble02">
+				<img src="img/svg/bubble03.svg" alt="" class="bubble03">
+			</div>
+		</div>
+		<!-- 註冊 -->
+		<div id="register">
+			<div class="wrapper">
+				<div class="register_logo">
+					<img src="img/registered.png" alt="">
+				</div>
+				<div class="register">
+					<input type="text" placeholder="真實姓名" v-model="register.name">
+					<input type="text" placeholder="Email" v-model="register.email">
+					<input type="tel" placeholder="手機 (0912345678)" v-model="register.phone">
+					<input type="password" placeholder="輸入密碼 (最少6碼)" v-model="register.password">
+					<input type="password" placeholder="再次輸入密碼" v-model="register.repassword">
+					<div class="checkbox">
+						<input type="checkbox" name="age" id="age" v-model="register.age">
+						<label for="age">我已年滿13歲(未滿20足歲者，已得到父或母或法定代理人之同意)</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="agree" id="agree" v-model="register.agree">
+						<label for="agree">我同意及接受本次 <a href="https://drive.google.com/file/d/1GIGjaUerqR5GBdUsQNqE1JDqfiDyKewH/view?usp=sharing" target="_blank">活動辦法</a></label>
+					</div>	
+					<div class="btn login_btn" @click="handleRegister">
+						確定
+					</div>
+				</div>
+				<img src="img/svg/bubble03.svg" alt="" class="bubble03">
+			</div>
+		</div>
+		<!-- 登入後內頁 -->
+		<div id="main">
+			<div class="wrapper">
+				<!-- header -->
+				<div class="header">
+					<div class="header_logo">
+						<img src="img/svg/logo.svg" alt="">
+					</div>
+					<div class="header_title">
+						<img src="img/title.png" alt="">
+					</div>
+					<div class="hamberger" @click="menu = !menu" :class="{active:menu}" onclick="gtag('event', 'menu ',{'label' : '打開menu', 'send_to':'UA-77248071-6'})"><!-- 漢堡 -->
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+				<!-- home -->
+				<div id="home">
+					<div class="status_bar">
+						<div class="status">
+							<p class="status_title">目前點數</p>
+							<div class="point">{{info.currentPoint}} <span>點</span></div>
+						</div>
+						<div class="status">
+							<p class="status_title">剩餘獎品數</p>
+							<div class="prize_count">
+								<div class="item">
+									<p class="prize">頭獎</p>
+									<div class="count">{{info.prize3}}</div>
+								</div>
+								<div class="item">
+									<p class="prize">二獎</p>
+									<div class="count">{{info.prize2}}</div>
+								</div>
+								<div class="item">
+									<p class="prize">三獎</p>
+									<div class="count">{{info.prize1}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottle">
+						<img src="img/bottle.png" alt="">
+					</div>
+					<div class="home_main">
+						<div class="main_wrapper">
+							<div class="home_table">
+								<table>
+									<tr>
+										<th>登錄<br>日期</th>
+										<th>發票<br>號碼</th>
+										<th>獲得<br>點數</th>
+										<th>
+											<select name="" id="invoice_filter" v-model="filter">
+												<option value="all">狀態</option>
+												<option value="confirmed">符合</option>
+												<option value="rejection">不符合</option>
+												<option value="unconfirmed">待確認</option>
+											</select>
+										</th>
+									</tr>
+									<tr v-for="(item, index) in invoice_filter" :class="{correct: item.status=='confirmed',confirming: item.status=='unconfirmed',incorrect: item.status=='rejection'}">
+										<td>{{item.date}}</td>
+										<td>{{item.number}}</td>
+										<td>{{item.points}}</td>
+										<td>
+											<span v-if="item.status=='confirmed'">符合</span>
+											<span v-if="item.status=='unconfirmed'">待確認</span>
+											<span v-if="item.status=='rejection'">不符合</span>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4" v-if="invoice_filter.length==0">{{homeNoStatus}}</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="btn_area">				
+							<div class="btn" @click="toExchange">
+								兌換獎品
+							</div>				
+							<div class="btn" @click="choose">
+								登錄發票
+							</div>
+						</div>
+					</div>
+					<!-- 選擇登錄方式 -->
+					<div class="home_choose">
+						<div class="main_wrapper">
+							<p>請選擇</p>
+							<p>發票登錄的方式</p>
+							<div class="btn_area">				
+								<div class="btn" @click="toInvoice">
+									發票登錄
+								</div>				
+								<div class="btn" @click="toDevice">
+									載具登錄
+								</div>
+							</div>
+						</div>
+						<div class="btn" @click="chooseToHome">
+							回首頁
+						</div>
+					</div>
+				</div>
+				<!-- 登錄發票 -->
+				<div id="touroku">
+					<img src="img/svg/bubble01.svg" alt="" class="bubble01">
+					<img src="img/svg/bubble02.svg" alt="" class="bubble02">
+					<!-- 發票登錄 -->
+					<div class="touroku1">
+						<div class="main_wrapper">
+							<div class="circle_title">
+								<img src="img/login_invoice.png" alt="">
+							</div>
+							<div class="example">
+								<img src="img/invoice.png" alt="">
+							</div>
+							<div class="invoice_item_list">
+								<!-- 電子發票登錄 item -->
+								<div class="invoice_item" v-for="(item, index) in invoiceList">
+									<div class="touroku_input">
+										<div class="label">
+											<p>發票號碼</p>
+											<input type="text" placeholder="GH123XXXXX" v-model='item.number' maxlength="10">
+										</div>
+									</div>
+									<div class="touroku_input touroku_input-duo">
+										<div class="label date_select">
+											<p>日期</p>
+											<!-- <input type="date" placeholder="10/10" v-model='item.invoiceDate'> -->
+											<select name="date" id="date" v-model="item.date">
+												<option value="" selected disabled>請選擇</option>
+												<option value="10910">09-10月</option>
+												<option value="10912">11-12月</option>
+											</select>
+										</div>
+										<div class="label label_short">
+											<p>隨機碼</p>
+											<input type="tel" placeholder="8365" v-model='item.random_code' maxlength="4">
+										</div>
+									</div>
+									<div class="upload">
+										<div class="invoice_preview">
+											<img src="" alt=""><input type="file" :id="item.id" accept="image/*" style="display:none" @change="uploadImg(index)" >
+											<label class="upload_btn" :for="item.id">
+												上傳發票照片
+												<img src="img/svg/icon_invoice.svg" alt="">
+											</label>										
+										</div>
+									</div>
+								</div>
+								<!--  -->
+							</div>
+							<!-- 新增一筆 -->
+							<div class="addone" @click="addOne" v-if="invoiceNum<5">
+								<div class="plus">+</div>
+								<p>新增一筆</p>
+							</div>
+							<!--  -->
+							
+							<div id="g-recaptcha1" class="g-recaptcha"></div>
+							
+							<div class="btn" @click="invoiceFinish">
+								確認送出
+							</div>
+						</div>
+					</div>
+					<!--  -->
+					<!-- 載具登錄 -->
+					<div class="touroku2">
+						<div class="main_wrapper">
+							<div class="circle_title">
+								<img src="img/login_number.png" alt="">
+							</div>
+							<div class="touroku_input">
+								<div class="label">
+									<p>載具號碼</p>
+									<input type="text" placeholder="/AUM8ERT" class="device_code" v-model="device.device_code">
+								</div>
+								<div class="label">
+									<p>驗證碼</p>
+									<input type="text" placeholder="288888" class="verification_code" v-model="device.verification_code">
+								</div>
+								<p class="forgotCode"><a href="https://www.einvoice.nat.gov.tw/APCONSUMER/BTC511W/" target="_blank">忘記驗證碼</a></p>
+							</div>
+							
+							<div id="g-recaptcha2" class="g-recaptcha"></div>
+							<div class="btn search_btn" @click="searchDevice">查詢紀錄</div>
+							<div class="device_record">
+								<div class="home_table">
+									<table>
+										<tr>
+											<th>發票<br>日期</th>
+											<th>發票<br>號碼</th>
+											<th>數量</th>
+										</tr>
+										<tr v-for="(item, index) in invoiceResult">
+											<td>{{item.date}}</td>
+											<td>{{item.number}}</td>
+											<td>{{item.count}}</td>
+										</tr>
+										<!-- <tr>
+											<td>9/20</td>
+											<td>EF238XXXXX</td>
+											<td>1</td>
+										</tr> -->
+									</table>
+								</div>
+								<div class="btn" @click="deviceFinish">確認送出</div>
+							</div>
+						</div>
+					</div>
+					<!--  -->
+					<!-- 登錄成功 -->
+					<div class="touroku_fin">
+						<div class="main_wrapper">
+							<div class="bravo">
+								BRAVO!
+							</div>
+							<div class="success">
+								您成功兌換了 <span>{{invoicePoint}}</span> 點
+							</div>
+							<div class="home_table">
+								<table>
+									<tr>
+										<th>發票號碼</th>
+										<th>獲得點數</th>
+									</tr>
+									<tr v-for="(item, index) in invoiceResult" v-if="item.status!=='<span>發票已登錄</span>'">
+										<td>{{item.number}}</td>
+										<td v-html="item.status"></td>
+									</tr>
+								</table>
+							</div>
+							<div class="btn" @click="tourokuFinish">確認</div>
+							<p class="fin_note">* 因財政部作業程序，請注意在購買產品後，需等待12~48小時才會存入財政部電子發票整合服務平台，若目前系統查詢不到您的發票，請耐心等待將由人工審核您的發票。</p>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<!-- 兌換獎品 -->
+				<div id="exchange">
+					<img src="img/svg/bubble01.svg" alt="" class="bubble01">
+					<img src="img/svg/bubble02.svg" alt="" class="bubble02">
+					<!-- step1 -->
+					<div class="step1">
+						<div class="main_wrapper">
+							<div class="currentP">
+								您目前共有 <span> {{info.currentPoint}} </span> 點!
+							</div>
+							<div class="prize_list">
+								<div class="item prize_bag" :class="{gray:info.currentPoint<40 || info.prize1==0 || info.exchange1>=5}">
+									<div class="prize_pic">
+										<img src="img/prize_bag.png" alt="">
+									</div>
+									<div class="prize_info">
+										<div class="prize_name">
+											SPORT b. 購物包 / 40點
+										</div>
+										<div class="prize_num">
+											<div class="buy_count">
+												<div class="minus" @click="prize1Minus">－</div>
+												<input type="text" v-model="exchange.prize1" disabled>
+												<div class="plus" @click="prize1Plus">＋</div>
+											</div>
+											<div class="buy_subtotal">
+												<p>小計</p>
+												<p class="subtotal">{{exchange.prize1 * 40}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="note notEnough" v-if="info.currentPoint<40 || notEnough.notEnough1">
+									<img src="img/svg/note.svg" alt="">
+									點數不夠，再多買幾瓶吧!
+								</div>
+								<div class="note notEnough" v-if="limited.limited1 || info.exchange1>=5">
+									<img src="img/svg/note.svg" alt="">
+									該商品已達兌換上限
+								</div>
+								<div class="note notEnough" v-if="info.prize1==0">
+									<img src="img/svg/note.svg" alt="">
+									該商品已全數兌完
+								</div>
+								<div class="item prize_wallet" :class="{gray:info.currentPoint<150 || info.prize2==0 || info.exchange2>=1}">
+									<div class="prize_pic">
+										<div class="wallet_list">
+											<div><img src="img/prize_wallet01.png" alt=""></div>
+											<div><img src="img/prize_wallet02.png" alt=""></div>
+											<div><img src="img/prize_wallet03.png" alt=""></div>
+										</div>
+									</div>
+									<div class="prize_info">
+										<div class="prize_name">
+											SPORT b. 零錢包 / 150點<br>
+											<span>* 共3款隨機出貨</span>
+										</div>
+										<div class="prize_num">
+											<div class="buy_count">
+												<div class="minus" @click="prize2Minus">－</div>
+												<input type="text" v-model="exchange.prize2" disabled>
+												<div class="plus" @click="prize2Plus">＋</div>
+											</div>
+											<div class="buy_subtotal">
+												<p>小計</p>
+												<p class="subtotal">{{exchange.prize2 * 150}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="note notEnough" v-if="info.currentPoint<150 || notEnough.notEnough2">
+									<img src="img/svg/note.svg" alt="">
+									點數不夠，再多買幾瓶吧!
+								</div>
+								<div class="note notEnough" v-if="limited.limited2 || info.exchange2>=1">
+									<img src="img/svg/note.svg" alt="">
+									該商品已達兌換上限
+								</div>
+								<div class="note notEnough" v-if="info.prize2==0">
+									<img src="img/svg/note.svg" alt="">
+									該商品已全數兌完
+								</div>
+								<div class="item prize_package" :class="{gray:info.currentPoint<300 || info.prize3==0 || info.exchange3>=1}">
+									<div class="prize_pic">
+										<img src="img/prize_package.png" alt="">
+									</div>
+									<div class="prize_info">
+										<div class="prize_name">
+											SPORT b. 後背包 / 300點
+										</div>
+										<div class="prize_num">
+											<div class="buy_count">
+												<div class="minus" @click="prize3Minus">－</div>
+												<input type="text" v-model="exchange.prize3" disabled>
+												<div class="plus" @click="prize3Plus">＋</div>
+											</div>
+											<div class="buy_subtotal">
+												<p>小計</p>
+												<p class="subtotal">{{exchange.prize3 * 300}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="note notEnough" v-if="info.currentPoint<300 || notEnough.notEnough3">
+									<img src="img/svg/note.svg" alt="">
+									點數不夠，再多買幾瓶吧!
+								</div>
+								<div class="note notEnough" v-if="limited.limited3 || info.exchange3>=1">
+									<img src="img/svg/note.svg" alt="">
+									該商品已達兌換上限
+								</div>
+								<div class="note notEnough" v-if="info.prize3==0">
+									<img src="img/svg/note.svg" alt="">
+									該商品已全數兌完
+								</div>
+							</div>
+						</div>
+						<div class="cart">
+							<div class="total">
+								<!-- <p>總共 <span>{{exchange.prize1 * 40 + exchange.prize2 * 150 + exchange.prize3 * 300}}</span> 點</p> -->
+								<p>總共 <span>{{cartPoint}}</span> 點</p>
+								<div class="remainder">剩餘 {{info.currentPoint - (exchange.prize1 * 40 + exchange.prize2 * 150 + exchange.prize3 * 300)}} 點</div>
+							</div>
+							<div class="btn_area">			
+								<div class="btn" @click="exchangeBack">
+									回首頁
+								</div>				
+								<div class="btn" @click="toStep2">
+									確認送出
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--  -->
+					<!-- step2 -->
+					<div class="step2">
+						<div class="main_wrapper">
+							<div class="prize_list">
+								<div class="item">
+									<div class="exchange_title">
+										兌換<br>獎項
+									</div>
+									<div class="line"></div>
+									<div class="exchange_list">
+										<p v-if="exchange.prize1>0">SPORT b.  購物包 x {{exchange.prize1}}</p>
+										<p v-if="exchange.prize2>0">SPORT b.  零錢包 x {{exchange.prize2}}</p>
+										<p v-if="exchange.prize3>0">SPORT b.  後背包 x {{exchange.prize3}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="touroku_input">
+								<div class="label">
+									<p>收件人</p>
+									<input type="text" placeholder="" class="recipient_name" v-model="exchange.recipient.name">
+								</div>
+								<div class="label">
+									<p>收件地址</p>
+									<input type="text" placeholder="*⽩天可簽收包裹之地址" class="recipient_address" v-model="exchange.recipient.address">
+								</div>
+								<div class="label">
+									<p>手機</p>
+									<input type="tel" placeholder="" class="recipient_phone" v-model="exchange.recipient.phone">
+								</div>
+								<div class="note">*務必填寫真實姓名，逾時連絡不到即取消中獎資格</div>
+							</div>
+							<div class="btn_area">		
+								<div class="btn" @click="toStep1">
+									回上頁
+								</div>				
+								<div class="btn" @click="toStep3">
+									確認送出
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--  -->
+					<!-- step3 -->
+					<div class="step3">
+						<div class="main_wrapper">
+							<div class="gift">
+								<img src="img/svg/gift.svg" alt="">
+							</div>
+							<div class="finish">
+								恭喜你已經兌換完成
+							</div>
+							<p>
+								您的獎項將於10/31，<br>統⼀寄出到您的指定地址，<br>感謝的您參與!
+							</p>
+							<div class="btn" @click="exchangeFinish">確定</div>
+						</div>
+					</div>
+					<!--  -->
+				</div>
+				<!--  -->
+				<!-- 兌換紀錄 -->
+				<div id="record">
+					<img src="img/svg/bubble01.svg" alt="" class="bubble01">
+					<img src="img/svg/bubble02.svg" alt="" class="bubble02">
+					<div class="main_wrapper">				
+						<div class="circle_title">
+							<img src="img/record.png" alt="">
+						</div>
+						<div class="record_list">
+							<div class="item" v-for="item in record">
+								<div class="date">
+									{{item.date}}
+								</div>
+								<div class="detail">
+									<div class="info">
+										<p>{{item.name}}</p>
+										<p>{{item.address}}</p>
+										<p>{{item.phone}}</p>
+									</div>
+									<div class="prize_record" v-for="prize in item.exchanges" v-if="prize.product_id==3">SPORT b. 購物包 x {{prize.amount}}</div>
+									<div class="prize_record" v-for="prize in item.exchanges" v-if="prize.product_id==2">SPORT b. 零錢包 x {{prize.amount}}</div>
+									<div class="prize_record" v-for="prize in item.exchanges" v-if="prize.product_id==1">SPORT b. 後背包 x {{prize.amount}}</div>
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center;font-size:20px" v-if="record.length==0">查無兌換紀錄</div>
+						<div class="btn" @click="recordBack">確認</div>
+					</div>
+				</div>
+				<!--  -->
+				<!-- 忘記密碼 -->
+				<div id="forget">
+					<div class="main_wrapper">				
+						<div class="circle_title">
+							<img src="img/forget.png" alt="">
+						</div>
+						<div class="touroku_input">
+							<div class="label">
+								<p>Email</p>
+								<input type="text" placeholder="請填寫您當初註冊的Email" class="recipient_name" v-model="forget.email">
+							</div>
+							<div class="note">*送出後請特別留意電⼦郵件信箱</div>
+						</div>
+						<div class="btn_area">		
+							<div class="btn" @click="forgetBack">
+								回上頁
+							</div>				
+							<div class="btn" @click="handleForget">
+								確認送出
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!--  -->
+			</div>
+		</div>
+		<!-- menu -->
+		<div id="menu" :class="{active:menu}">
+			<div class="menu_wrapper">
+				<div class="header_logo">
+					<img src="img/svg/logo.svg" alt="">
+				</div>
+				<div class="header_title">
+					<img src="img/title.png" alt="">
+				</div>
+				<div class="tital_bar">
+					<img src="img/titlebar_white.png" alt="">
+				</div>
+				<div class="menu">
+					<p @click="toHome">回首頁</p>
+					<p><a href="https://drive.google.com/file/d/1GIGjaUerqR5GBdUsQNqE1JDqfiDyKewH/view?usp=sharing" target="_blank" onclick="gtag('event', 'menu ',{'label' : '活動辦法', 'send_to':'UA-77248071-6'})">活動辦法</a></p>
+					<p @click="toRecord">兌換紀錄</p>
+				</div>
+				<img src="img/svg/bubble03.svg" alt="" class="bubble03">
+			</div>
+		</div>
+		<!-- loading -->
+		<div class="loading">
+			<img src="img/svg/loading.svg" alt="">
+		</div>
+	</div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="js/app.js"></script>
+
+</html>
