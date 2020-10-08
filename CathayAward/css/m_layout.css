@@ -1,0 +1,1062 @@
+@media screen and (max-width: 1380px){
+  .curve02{
+    bottom: -300px;
+  }
+  .slick-next {
+    right: -35px;
+  }
+  .slick-prev {
+    left: -35px;
+  }
+}
+@media screen and (max-width: 1000px){
+  br.pc_only{
+    display: none;
+  }
+  header{
+    background-color: #ffffff;
+    border-radius: 0 0 20px 20px;
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 15px 25px;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .menuToggle{
+    margin-right: 0;
+    padding: 0;
+  }
+  .menuToggle p{
+    display: none;
+  }
+  .menuToggle span.bar{
+    height: 5px;
+    width: 45px;
+  }
+  .menuToggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(0px, -7px);
+  }
+  .menuToggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-2px, 1px);
+  }
+  .kv{
+    background-image: url(../images/kv.jpg);
+    background-position: center -20px;
+    background-size: 1152px 540px;
+    background-repeat: no-repeat;
+    min-height: 500px;
+  }
+  .kv video{
+    opacity: 0;
+  }
+  .kv_scroll{
+    opacity: 0;
+  }
+  .main{
+    padding-top: 50px;
+    /* margin-bottom: 0; */
+  }
+  .profile{
+    width: 500px;
+    display: block;
+    height: auto;
+    max-width: 80%;
+  }  
+  .profile_head{
+    width: 100%;
+    border-radius: 30px 30px 0 0 ;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile_head_photo{
+    width: 75px;
+    height: 75px;
+    border: none;
+    top: initial;
+    margin: 15px;
+  }
+  .profile_head_photo a{
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+  }
+  .profile_head_text{
+    text-align: left;
+    margin-left: 20px;
+  }
+  .profile_head_name{
+    font-size: 26px;
+  }
+  .profile_body{
+    flex-direction:column;
+    padding: 30px 30px 40px;
+  }
+  .profile_body_item{
+    margin: 10px auto;
+    order: 2;
+    max-width: 500px;
+    width: 80%;
+    height: auto;
+  }
+  .profile_body_item_head{
+    font-size: 16px;
+    padding: 10px 0 10px 0;
+  }
+  .chartArea{
+    order: 1;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .profile_body_item_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .profile_body_item_percentage{
+    border-bottom: none;
+    margin-bottom: 0;
+    width: 49%;
+  }
+  .profile_body_item:nth-child(2) .profile_body_item_percentage{
+    border-bottom: none;
+  }
+  .profile_body_item:nth-child(3) .profile_body_item_percentage{
+    border-bottom: none;
+  }
+  .profile_body_item_body .mb_midline{
+    width: 1px;
+    height: 50px;
+    background-color: #efa84d;
+  }
+  .profile_body_item:nth-child(2) .mb_midline{
+    background-color: #68ce68;
+  }
+  .profile_body_item:nth-child(3) .mb_midline{
+    background-color: #f289b0;
+  }
+  .profile_body_item_percentage span{
+    font-size: 50px;
+  }
+  .profile_body_item_comp{
+    font-size: 17px;
+    width: 49%;
+  }
+  .profile_body_item_complete{
+    right: -16px;
+    top: -13px;
+  }
+  .update{
+    bottom: 10px;
+    right: 0px;
+    left: 0;
+    text-align: center;
+  }
+  .charity, .currentRace{
+    width: 500px;
+    max-width: 80%;
+    padding: 40px 25px;
+    z-index: 2;
+  }
+  .charity h2, .currentRace h2{
+    font-size: 20px;
+  }
+  .charity_list_area {
+    justify-content: center;
+}
+  .currentRace h2{
+    margin-bottom: 20px;
+  }
+  .currentRace_title{
+    display: block;
+  }
+  .currentRace_title ul{
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .currentRace_item{
+    height: 190px;
+    width: 270px;
+    max-width: 90%;
+  }
+  .currentRace_item_head{
+    display: flex;
+    align-items: center;
+  }
+  .currentRace_item_icon{
+    width: 90px;
+    height: 90px;
+    margin: 0 10px -30px 10px;
+    top: -20px;
+  }
+  .currentRace_item_title{
+    font-size: 18px;
+  }
+  .status_L, .status_R{
+    padding: 0 20px;
+  }
+  .curve02{
+    bottom: -200px;
+  }
+  /* competition */
+  .kv_competition{
+    height: 500px;
+  }
+  .kv_competition h2{
+    padding-top: 170px;
+  }
+  .main_competition .news{
+    width: 500px;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    background-position: 0px -120px;
+    padding: 20px;
+  }
+  .main_competition .news::before{
+    width: 490px;
+    max-width: 98%;
+    left: 4px;
+  }  
+  .main_competition .news::after{
+    width: 480px;
+    max-width: 96%;
+    left: 8px;
+  }
+  .news_head{
+    height: 100px;
+    position: relative;
+    width: auto;
+  }
+  .news h3{
+    writing-mode: initial;
+    font-size: 20px;
+    padding: 10px 0 0 20px;
+  }
+  .news .trophy {
+    position: absolute;
+    bottom: 30px;
+    left: auto;
+    right: 20px;
+    width: 85px;
+  }
+  .news_body{
+    width: auto;
+  }
+  .news_body ul{
+    padding: 0;
+  }
+  .news_body ul li{
+    width: 90%;
+    height: auto;
+    margin: 0 auto 15px;
+  }
+  .news_body ul li span.date{
+    display: block;
+    border-radius: 17.5px 17.5px 0 0 ;
+    margin: 0;
+  }
+  .news_body ul li span:last-child{
+    padding: 15px;
+    display: block;
+    line-height: 1.4;
+  }
+  .btnAll_area{
+    text-align: center;
+  }
+  .competition_item{
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto 60px;
+    border-radius: 15px;
+  }
+  .competition_item_close{
+    width: 32px;
+    height: 32px;
+    left: calc(50% - 16px);
+    line-height: 32px;
+    font-size: 16px;
+    bottom: -16px;
+  }
+  .competition_item_head{
+    padding-bottom: 20px;
+  }
+  .competition_title_icon{
+    width: 100px;
+  }
+  .competition_title_text h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+  .uncompleted{
+    right: 20px;
+    width: 50px;
+  }
+  .competition_tab ul{
+    padding: 0 ;
+  }
+  .competition_tab ul li{
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .statusBar{
+    display: block;
+    height: auto;
+    padding: 15px 0 18px;
+    border-radius: 20px;
+  }
+  .statusBar ul{
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+    height: 95px;
+  }
+  .statusBar ul li{
+    font-size: 35px;
+    line-height: 1.4;
+  }
+  .statusBar ul li img{
+    display: block;
+    width: 53px;
+    margin: auto;
+  }
+  .statusBar ul li:first-child:after{
+    right: -2px;
+    bottom: 10px;
+  }
+  .statusBar a.dl{
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .chart_area{
+    justify-content: space-around;
+  }
+  .chart_col_2{
+    width: 100%;
+    max-width: 100%;
+  }
+  .progressbar_area{
+    display: block;
+    overflow: scroll;
+    padding: 40px 10px 60px;
+    position: relative;
+    left: 9%;
+    margin-left: -9%;
+  }
+  .progressbar{
+    padding-right: 30px;
+  }
+  .progressbar_name{
+    margin-bottom: 30px;
+  }
+  .closeGreen{
+    right: 10px;
+  }
+  .board_title{
+    margin: 90px 0 20px;
+  }
+  .board{
+    display: block;
+    width: 500px;
+    max-width: 95%;
+    margin: auto;
+  }
+  .board_tabs{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: auto;
+  }
+  .board_tabs ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .board_tabs ul li{
+    margin: 25px 0;
+  }
+  .board_list{
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    padding: 35px 0;
+  }
+  .board_item{
+    width: 85%;
+  }
+  .board_item_head .department{
+    float: none;
+    margin-top: 10px;
+  }
+  .board_item_body .content{
+    margin-bottom: 20px;
+  }
+  .board_item_body .link a{
+    line-height: 1;
+  }
+  .board_item_body .link .more{
+    float: none;
+    width: 100%;
+    margin: 20px 0 10px;
+  }
+  .page_area{
+    padding: 0 40px;
+  }
+  .page_area .prev .text, .page_area .next .text{
+    display: none;
+  }
+  .page_area .page ul li{
+    margin: 0 2px;
+  }
+  .green_mask img.board_img{
+    display: none;
+  }
+  /* honorlist */
+  .main_honorlist{
+    width: 500px;
+    max-width: 90%;
+    display: block;
+  }
+  .honor_profile{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  .honor_profile .profile_head_photo{
+    width: 75px;
+    height: 75px;
+    margin: 0;
+  }
+  .honor_menu{
+    display: none;
+  }
+  .honor_select{
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 280px;
+    max-width: 90%;
+  }
+  .honor_select select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: -1.4px 8.9px 21px 0 rgba(0, 0, 0, 0.1);
+    border: solid 2px #01aa4f;
+    background-color: #ffffff;
+    padding: 0 27px;
+  }
+  .honor_select span{
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+  .honor_main{
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    padding: 75px 20px;
+  }
+  .honor_main .special{
+    display: block;
+  }
+  .honor_main .special .honor_item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .honor_main .special .honor_item img{
+    /* width: 50%; */
+    max-width: 180px;
+  }
+  .honor_main .special_sub{
+    display: none;
+  }
+  .medals .honor_item{
+    width: 47%;
+    margin: 20px 1.5%;
+  }
+  .medals .honor_item img{
+    width: 80%;
+  }
+  .monthly{
+    display: block;
+  }
+  .monthly_item{
+    width: 100%;
+  }
+  .monthly_item img{
+    width: 40%;
+    position: relative;
+    right: 10px;
+  }
+  .details_wrapper{
+    width: 500px;
+  }
+  .medal_details{
+    width: 500px;
+    max-width: 90%;
+  }
+  .details_head{
+    margin-bottom: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .details_head img{
+    width: 120px;
+    height: 120px;
+    top: -20px;
+    margin: 0;
+    left: -10px;
+  }
+  .medal_details .details_title{
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+  .medal_details .details_name{
+    font-size: 20px;
+  }
+  .medal_details .details_sub{
+    font-size: 15px;
+  }
+  .details_body{
+    padding: 55px 25px;
+  }
+  .details_banner{
+    height: 220px;
+  }
+  .details_banner_text{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .details_banner_text::before{
+    width: 55px;
+    height: 80px;
+    left: 0px;
+  }
+  .details_banner_text::after{
+    width: 55px;
+    height: 80px;
+    right: 0px;
+  }
+  .details_banner_text .year{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+  }
+  .details_banner_text .name{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    letter-spacing: 3.25px;
+  }
+  .details_banner_text .point{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+  }
+  .details_banner img{
+    width: 260px;
+    bottom: -70px;
+    top: unset;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  .history_area{
+    justify-content: flex-start;
+  }
+  .history_item{
+    width: 85px;
+    height: 85px;
+    border-radius: 15px;
+    padding-top: 20px;
+    margin: 5px;
+  }
+  .history_item .point{
+    font-size: 26px;
+  }
+  .history_item .year{
+    font-size: 13px;
+    letter-spacing: initial;
+  }
+  .details_btn{
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    line-height: 45px;
+  }
+  .details_prev{
+    left: 0px;
+    top: 35px;
+  }
+  .details_next{
+    right: 0;
+    top: 35px;
+  }
+  .details_prev span{
+    top: 2px;
+    right: 2px;
+  }
+  .details_next span{
+    top: 2px;
+    left: 2px;
+  }
+  /* blueprint */
+  .level_wrapper{
+    max-width: 100%;
+  }
+  .level_head{
+    width: 250px;
+  }
+  .level_body{
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .level_title{
+    margin-left: 60px;
+  }
+  .level_title img{
+    height: 120px;
+  }
+
+}
+@media screen and (max-width: 768px){
+  .slick_productBtn{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .slick-next {
+    right: -20px;
+  }
+  .slick-prev {
+    left: -20px;
+  }
+  .slick-next span{
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
+  .slick-prev span{
+    position: relative;
+    top: 1px;
+    left: -1px;
+  }
+  .curve02{
+    bottom: -150px;
+  }
+  .whiteBG{
+    padding-bottom: 200px;
+    padding-top: 250px;
+  }
+  .whiteBG h2{
+    font-size: 30px;
+  }
+  .tent{
+    display: none;
+  }
+  footer a.totop{
+    bottom: 80px;
+    right: 30px;
+  }
+  .kv_page{
+    height: 400px;
+    margin-bottom: -100px;
+  }
+  .kv_page h2{
+    padding-top: 140px;
+    font-size: 50px;
+  }
+  /* blueprint */
+  .map_wrapper{
+    margin-top: -180px;
+  }
+  .map{
+    width: 1633px;
+    height: 400px;
+    background-image: url(../images/road_m.png);
+    background-size: contain;
+  }
+  .map_item{
+    width: 90px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 75px;
+  }
+  .map_item_1 {
+    top: 126px;
+    left: 90px;
+  }
+  .map_item_1::after {
+    bottom: -65px;
+    left: -51px;
+    width: 180px;
+    height: 147px;
+    background-size: cover;
+    background-image: url(../images/job_01.png);
+  }
+  .map_item_2 {
+    top: 100px;
+    left: 356px;
+  }
+  .map_item_2::after {
+    bottom: -80px;
+    left: -51px;
+    width: 180px;
+    height: 147px;
+    background-size: cover;
+    background-image: url(../images/job_02.png);
+  }
+  .map_item_3 {
+    top: 185px;
+    left: 620px;
+  }
+  .map_item_3::after {
+    bottom: -95px;
+    left: -51px;
+    width: 180px;
+    height: 147px;
+    background-size: cover;
+    background-image: url(../images/job_03.png);
+  }
+  .map_item_4 {
+    top: 95px;
+    left: 878px;
+  }
+  .map_item_4::after {
+    bottom: -125px;
+    left: -51px;
+    width: 180px;
+    height: 147px;
+    background-size: cover;
+    background-image: url(../images/job_04.png);
+  }
+  .map_item_5 {
+    top: 166px;
+    left: 1161px;
+  }
+  .map_item_5::after {
+    bottom: -100px;
+    left: -51px;
+    width: 180px;
+    height: 147px;
+    background-size: cover;
+    background-image: url(../images/job_05.png);
+  }
+  .map_item_6 {
+    top: 90px;
+    left: 1470px;
+  }
+  .map_item_6::after {
+    bottom: -85px;
+    left: -51px;
+    width: 180px;
+    height: 147px;
+    background-size: cover;
+    background-image: url(../images/job_06.png);
+  }
+  .gesture{
+    display: none;
+  }
+
+  .green_mask_bp{
+    background-color: rgba(0,0,0,0);
+    position: fixed;
+  }
+  .green_mask_bp .closeBP{
+    display: none;
+  }
+  .closeBP_m{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  .level_wrapper{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .level{
+    display: block;
+    background-color: rgba(255, 244, 60, .8);
+    border-radius: 0px;
+  }
+  .level_head{
+    width: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .level_title{
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .level_title img{
+    display: none;
+  }
+  .level_list{
+    display: none;
+  }
+  .external-scroll_y2.scroll-scrolly_visible{
+    display: none;
+  }
+  .level_body{
+    border-radius: 30px 30px 0 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 50px;
+    height: 100vh;
+  }
+  .level_body img{
+    width: 40%;
+  }
+  .level_prize{
+    font-size: 20px;
+    justify-content: center;
+  }
+  .level_btnarea{
+    margin-top: 40px;
+  }
+  .level_btnarea a.btn{
+    width: 175px;
+  }
+  .level_list_m{
+    display: block;
+    margin-top: 50px;
+  }
+  .level_list_m {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+  .level_list_m ul li{
+    display: inline-flex;
+    width: 115px; 
+    height: 100px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 5px;
+    border: solid 1px #a4a4a4;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .level_list_m ul li.active{
+    border: solid 1px #fff43c;
+  }
+  .position{
+    display: none;
+  }
+  
+  .blueprint_detail{
+    margin-top: -200px;
+  }
+
+    /* browserBox ***************/
+    .browserBox {
+      left: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100%;
+      height: 70%;
+    }
+  
+    .browserBox>.flexBox {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0.5rem;
+    }
+  
+    .bBTlt {
+      font-size: 0.35rem;
+    }
+  
+    .bBp {
+      font-size: 0.28rem;
+      line-height: 1.43;
+      margin-top: 0.35rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .bBlogobox {
+      font-size: 0.25rem;
+    }
+  
+    .chromeLogo {
+      width: 1.42rem;
+    }
+  
+    .safariLogo {
+      width: 1.48rem;
+    }
+  
+    .firefoxLogo {
+      width: 1.46rem;
+    }
+}
+@media screen and (max-width: 500px){
+  footer a.totop{
+    bottom: 70px;
+  }
+  .profile_body_item_percentage span{
+    font-size: 36px;
+  }
+  .charity_list_tag{
+    width: auto;
+    min-width: auto;
+  }
+  .charity_check{
+    margin: 0 12px;
+  }
+  .charity_list_tagname{
+    display: none;
+  }
+  .curve02{
+    bottom: -100px;
+  }
+  /* page */
+  .kv_page{
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .kv_page h2{
+    width: 125px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 23px;
+    line-height: 45px;
+    background-color: #fff;
+    padding-top: 0;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    letter-spacing: 2.3px;
+  }
+  .kv_page h2:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 5px)
+  }
+  /* competition */
+  .kv_competition{
+    background-image: url(../images/topKV_competition_m.jpg);
+  }
+  .news .trophy{
+    right: 0px;
+  }
+  .competition_title_icon {
+    width: 85px;
+  }
+  .competition_title{
+    padding: 0 10px;
+  }
+  .competition_title_text{
+    margin-left: 10px;
+  }
+  .uncompleted {
+    right: 10px;
+  }
+  .statusBar ul{
+    height: 85px;
+  }
+  .statusBar ul li{
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  .chart_item{
+    width: 115px;
+  }
+  .chart_text{
+    top: 10px;
+    left: 10px;
+    width: 85px;
+    height: 85px;
+    padding-top: 18px;
+  }
+  .chart_text .chart_val {
+    font-size: 25px;
+  }
+  .chart_text p.achieve {
+    font-size: 15px;
+  }
+  .chart_text p {
+    font-size: 12px;
+    width: 54px;
+    padding: 3px 0;
+  }
+  .chart_name{
+    margin-top: 130px;
+  }
+  .board_title{
+    font-size: 32px;
+  }
+  /* honorlist */
+  .kv_honorlist{
+    background-image: url(../images/topKV_honorList_m.jpg);
+  }
+  .monthly_item .month{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .show_3d video{
+    pointer-events: initial;
+    border-radius: 10px;
+  }
+  /* blueprint */  
+  .kv_blueprint{
+    background-image: url(../images/topKV_bluePrint_m.jpg);
+  }
+  .blueprint_detail{
+    margin-top: -150px;
+  }
+  .bpdetail_head{
+    height: 80px;
+    line-height: 80px;
+    font-size: 28px;
+  }
+  .bpdetail_item span.title{
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 400px){
+  .status_L, .status_R{
+    padding: 0 15px;
+  }
+  .monthly_item p{
+    font-size: 13px;
+  }
+}

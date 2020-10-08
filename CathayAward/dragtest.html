@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1, .box2{
+            display: flex;
+            border: solid 1px #aaa;
+            justify-content: start;
+            padding: 10px;
+            flex-wrap: wrap;
+            width: 900px;
+        }
+        .box1 .item{
+            width: 30%;
+            background-color: #fcf;
+            height: 300px;
+            margin: 1.5%;
+            font-size: 36px;
+            text-align: center;
+            line-height: 300px;
+            outline: solid 1px #000;
+            cursor: grab;
+        }
+        .box2 .item{
+            width: 24%;
+            background-color: #cff;
+            height: 200px;
+            margin: 0.5%;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            outline: solid 1px #000;
+            cursor: grab;
+            user-select: none;
+        }
+        .item:active{
+            cursor: grabbing;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>BOX1</h2>
+    <div class="box box1">
+        <div class="item" data-order="" data-type="box1">1</div>
+        <div class="item" data-order="" data-type="box1">2</div>
+        <div class="item" data-order="" data-type="box1">3</div>
+        <div class="item" data-order="" data-type="box1">4</div>
+        <div class="item" data-order="" data-type="box1">5</div>
+        <div id="six" class="item" data-order="" data-type="box1">6</div>
+    </div>
+    <h2>BOX2</h2>
+    <div class="box box2">
+        <div class="item" data-order="" data-type="box2">a</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+        <div class="item" data-order="" data-type="box2">b</div>
+        <div class="item" data-order="" data-type="box2">c</div>
+        <div class="item" data-order="" data-type="box2">d</div>
+        <div class="item" data-order="" data-type="box2">e</div>
+        <div class="item" data-order="" data-type="box2">f</div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/plugins.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/sortable.js"></script>
+<script>
+    
+    const item = document.querySelectorAll('.box');
+    var nodes = Array.prototype.slice.call( document.querySelector('.box').children )
+    // console.log(item[0].children[1])
+    // item.dataset.order = 'a';
+    // console.log(item)
+    // const items = $('.item');
+    // console.log(items)
+    // console.log(items.index())
+    // item.forEach(function(item){
+    //     console.log(item)
+    //     item.indexof('.box')
+    // })
+    // items.each(function(index, item){
+    //     var num = item.index
+    //     console.log(num)
+    // })
+    // for (var i=0; i<items.length; i++){
+    //     console.log(items[i])
+    //     // const num = items[i].index();
+    //     // console.log(num)
+    // }
+
+    const containers = document.querySelectorAll('.box2');
+    const dropitem = document.querySelectorAll('.item');
+    const dropitem1 = document.querySelector('.item');
+    // console.log(dropitem1)
+    // const droppable = new Draggable.Droppable(containers, { //register dropzones as containers
+    //     draggable: '.item',
+    //     dropzone: '.box',
+    //     mirror: {
+    //         constrainDimensions: true, //prevent element from shrinking while being dragged
+    //     },
+    // });    
+    const sortable = new Draggable.Sortable(containers, {
+        draggable: '.item',
+        mirror: {
+            constrainDimensions: true
+        }
+    })
+    // console.log(sortable)
+    sortable.on('drag:start', () => {
+        console.log('drag:start')
+    })
+    sortable.on('drag:stop', () => {
+        console.log('drag:stop')
+        setTimeout(function(){
+            dropitem.forEach(function(item){
+                const index = sortable.index(item);
+                item.dataset.order = index;        
+            })
+        },100)        
+    })
+    dropitem.forEach(function(item){
+        // console.log(item)
+        // console.log(sortable.index(item))
+        const index = sortable.index(item);
+        item.dataset.order = index;        
+    })
+    const indexID = sortable.index(dropitem[0])
+    // console.log(indexID)
+    
+</script>
+</html>

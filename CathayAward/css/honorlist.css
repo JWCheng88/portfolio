@@ -1,0 +1,1197 @@
+.kv_honorlist{
+  background-image: url(../images/topKV_honorList.jpg);
+}
+.kv_honorlist_share{
+  background-image: url(../images/topKV_honorList_share.jpg);
+}
+.main_honorlist{
+  width: 1140px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  padding-bottom: 200px;
+}
+.honor_side{
+  position: relative;
+}
+.honor_profile{
+  position: relative;
+  width: 200px;
+  height: 264px;
+  border-radius: 30px 0 0 30px;
+  background-color: #fff43c;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding-top: 25px;
+  box-sizing: border-box;
+}
+.honor_profile .profile_head_photo{
+  width: 120px;
+  height: 120px;
+  top: 0px;
+  margin-bottom: 15px;
+}
+.honor_profile .profile_head_name{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.honor_profile .profile_head_title{
+  line-height: 1.3;
+}
+.honor_menu{
+  width: 140px;
+  background-color: #048b42;
+  border-radius: 0 0 0 30px;
+  margin-left: 60px;
+}
+.honor_menu ul{
+  text-align: center;
+  padding: 40px 0;
+  margin: 0;
+}
+.honor_menu ul li{
+  padding: 15px 0;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+.honor_menu ul li:hover{
+  color: rgba(255, 255, 255, 0.55);
+}
+.honor_menu ul li.active{
+  color: #fff;
+}
+.honor_menu ul li a{
+  color: rgba(255, 255, 255, 0.25);
+}
+.honor_select{
+  display: none;
+}
+.honor_main{
+  background-color: #fff;
+  width: 940px;
+  border-radius: 0 30px 30px 30px;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
+  padding: 40px 50px;
+  box-sizing: border-box;
+}
+.honor_main h3{
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: relative;
+}
+.honor_main h3::before{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: calc(100% - 100px);
+  height: 1px;
+  background-color: #01aa4f;
+}
+.honor_main h3::after{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 200px;
+  top: 50%;
+  width: calc(100% - 300px);
+  height: 1px;
+  background-color: #fff43c;
+}
+.honor_main .special{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.honor_main .honor_item{
+  width: 32%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.honor_main .honor_item .img_area{
+  cursor: pointer;
+  position: relative;
+}
+.honor_item.light img{
+  filter: contrast(2);
+  transition: .3s;
+}
+.threeD:before{
+  content: '';
+  background-image: url(../images/light.png);
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.medals .threeD:before{
+  left: -50%;
+  width: 200%;
+}
+.shine.threeD:before{
+  display: block;
+  animation-name: shine;
+  animation-duration: .35s;
+}
+@keyframes shine{
+  0%{top: -50%;}
+  95%{top:40%}
+  100%{opacity: 0;}
+}
+.honor_main .special .name{
+  font-size: 17.5px;
+  color: #000;
+  letter-spacing: 1.75px;
+  margin: 15px 0 10px;
+}
+.honor_main .special .sub{
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #333;
+}
+.honor_main .show{
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: #999999;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.honor_main .special .show span{
+  font-size: 28px;
+  margin-top: 5px;
+  position: relative;
+  top: 7px;
+  right: 5px;
+}
+.honor_main .special .addItem{
+  display: none;
+}
+.medals{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.medals .honor_item{
+  width: 22%;
+  text-align: center;
+  margin: 40px 1.5%;
+  border-radius: 30px;
+}
+.medals .honor_item img{
+  cursor: pointer;
+}
+.medals .honor_item.flip img{
+  /* transform: rotateY(180deg);
+  transition: .5s; */
+  animation-name:flip;
+  animation-duration:.4s;
+  animation-timing-function: linear;
+}
+@keyframes flip{
+  0%{transform: rotateY(0deg);}
+  50%{
+    transform: rotateY(90deg);
+    filter: contrast(100%);
+  }
+  51%{
+    filter: contrast(60%);
+  }
+  100%{
+    transform: rotateY(180deg);
+    filter: contrast(20%);
+  }
+}
+.medals .honor_item .pickup,
+.medals .honor_item .eye{
+  display: none;
+}
+.medals .honor_item .text_area{
+  margin-top: 10px;
+}
+.medals .name{
+  font-size: 17px;
+  letter-spacing: 1.7px;
+  margin: 10px;
+}
+.medals .sub{
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 1.4px;
+}
+.medals .sub span{
+  color: #11a848;
+}
+.medals .point{
+  font-size: 15px;
+  color: #11a848;
+  letter-spacing: 1.4px;
+}
+.monthly{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.monthly_item{
+  display: flex;
+  align-items: center;
+  width: 48%;
+  justify-content: center;
+  margin: 30px 0;
+}
+.monthly_item.monthly_failed{
+  filter: grayscale(1);
+}
+.monthly_item .monthly_text{
+  width: 150px;
+}
+.monthly_item .month{
+  text-align: center;
+  color: #01aa4f;
+  font-size: 20px;
+  border-bottom: 1px solid #666;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.monthly_item img{
+  width: 50%;
+}
+.monthly_item p{
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #333;
+  margin: 5px;
+  margin-left: 10px;
+}
+.monthly_item p span{
+  display: inline-block;
+  width: 70px;
+  margin-right: 10px;
+}
+
+/* medal details */
+.details_wrapper{
+  width: 1150px;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+}
+.medal_details{
+  width: 845px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+.details_head{
+  background-color: #fff43c;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  margin-bottom: -50px;
+}
+.details_head img{
+  width: 230px;
+  height: 230px;
+  position: relative;
+  top: -50px;
+  margin-left: 90px;
+}
+.medal_details .details_title{
+  margin: 50px 0 0 40px;
+}
+.medal_details .details_name{
+  font-size: 35px;
+  color: #01aa4f;
+  letter-spacing: 3.5px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+.medal_details .details_sub{
+  font-size: 25px;
+  color: #333;
+  letter-spacing: 2.5px;
+}
+.details_body{
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+  padding: 55px 70px 40px;
+}
+.details_body p{
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+.details_banner{
+  width: 100%;
+  background-image: url(../images/honorBanner_bg.png);
+  border-radius: 20px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 50px;
+}
+.details_banner_text{
+  text-align: center;
+  color: #fff;
+  width: 270px;
+  margin-top: 55px;
+  margin-left: 120px;
+  position: relative;
+}
+.details_banner_text::before{
+  content: '';
+  width: 88px;
+  height: 130px;
+  background-image: url(../images/svg/laurel_L.svg);
+  position: absolute;
+  left: -60px;
+  top: -10px;
+}
+.details_banner_text::after{
+  content: '';
+  width: 88px;
+  height: 130px;
+  background-image: url(../images/svg/laurel_R.svg);
+  position: absolute;
+  right: -60px;
+  top: -10px;
+}
+.details_banner_text .year{
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+}
+.details_banner_text .name{
+  font-size: 32.5px;
+  font-weight: bold;
+  margin: 15px 0;
+  letter-spacing: 3.25px;
+}
+.details_banner_text .point{
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+}
+.details_banner img{
+  position: absolute;
+  right: -100px;
+  top: 20px;
+}
+.history_area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.history_item{
+  width: 125px;
+  height: 125px;
+  border-radius: 30px;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding-top: 35px;
+  box-sizing: border-box;
+}
+.history_item .point{
+  color: #01aa4f;
+  font-size: 38px;
+  font-weight: bold;
+}
+.history_item .year{
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 1.4px;
+}
+.details_btn{
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  color: #01aa4f;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0px 12px 29px 0 rgba(0, 0, 0, 0.2);
+}
+.details_prev{
+  left: 0;
+  top: 50%;
+}
+.details_next{
+  right: 0;
+  top: 50%;
+}
+.details_prev span{
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+.details_next span{
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+.show_3d{
+  width: 600px;
+  max-width: 85%;
+  position: relative;
+  margin: 150px auto;
+}
+.show_3d video{
+  width: 100%;
+  pointer-events: none;
+  border-radius: 40px;
+}
+.close3d{
+  color: #fff43c;
+  position: absolute;
+  font-size: 40px;
+  top: -50px;
+  right: 10px;
+}
+.close3d .icon-ic_close:before{
+  color: #fff43c;
+}
+
+/* category */
+.honor_category{
+  padding-top: 80px;
+}
+.honor_category .select_area{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -30px;
+}
+.honor_main.honor_category h3::before{
+  right: 300px;
+  width: calc(100% - 450px);
+}
+.honor_main.honor_category h3::after{
+  right: 400px;
+  width: calc(100% - 550px);
+}
+.honor_category select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 125px;
+  border-radius: 20px;
+  border: solid 2px #333333;
+  background-color: #ffffff;
+  padding: 0 17px;
+  outline: none;
+  margin-left: 10px;
+}
+.honor_category .honor_category_select{
+  position: relative;
+}
+.honor_category .honor_category_select span{
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 20px;
+}
+.honor_category .honor_category_select span:before{
+  color: #000;
+}
+@media screen and (max-width: 1000px){
+  .honor_category .select_area{
+    top: 0;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .honor_main.honor_category h3::before{
+    right: 0px;
+    width: calc(100% - 150px);
+  }
+  .honor_main.honor_category h3::after{
+    right: 200px;
+    width: calc(100% - 350px);
+  }
+}
+
+/* Edit */
+.edit_btn_area{
+  text-align: right;
+  padding: 0px 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.edit_btn{
+  cursor: pointer;
+  margin: 0 0 0 30px;
+  color: #666;
+}
+.save, .cancel{
+  display: none;
+  margin: 0 0 0 30px;
+  cursor: pointer;
+  width: 90px;
+  height: 35px;
+  border-radius: 17.5px;
+  color: #fff;
+  background-color: #666;
+  line-height: 35px;
+  text-align: center;
+}
+.save{
+  background-color: #01aa4f;
+}
+.black{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 25;
+  display: none;
+}
+.edit.honor_main{
+  z-index: 26;
+}
+.edit .edit_btn{
+  display: none;
+}
+.edit .save, .edit .cancel{
+  display: block; 
+}
+.edit .medals_area h3{
+  display: none;
+}
+.edit.honor_main .honor_item{
+  overflow: initial;
+}
+.edit .special .honor_item{
+  border: dashed 1px #bbb;
+  width: 30%;
+}
+.edit.honor_main .special .addItem{
+  display: block;
+  color: #bbb;
+  line-height: 1.5;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  letter-spacing: 1.6px;
+}
+.edit .special .sub,
+.edit .show{
+  display: none;
+}
+.edit .medals{
+  align-items: stretch;
+}
+.edit .medals .honor_item{
+  border: solid 1px #bbb;
+  padding: 30px 0 20px;
+  box-sizing: border-box;
+  cursor: grab;
+}
+.honor_main .honor_item .img_area{
+  cursor: grab;
+}
+.edit .medals .honor_item .img_area img{
+  transform: scale(.9);
+  cursor: grab;
+}
+.edit .medals .honor_item .pickup{
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #ccc;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 4;
+}
+.edit .medals .honor_item.picked{
+  border: solid 2px #01aa4f;
+}
+.edit .medals .honor_item.picked .pickup{
+  background-color: #01aa4f;
+  border: solid 1px #01aa4f;
+}
+.edit .medals .honor_item .pickup:after{
+  width: 15px;
+  height: 7px;
+  background-color: transparent;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  content: '';
+  border: 5px solid #fff;
+  border-top: none;
+  border-right: none;
+}
+.edit .medals .honor_item .eye{
+  display: block;
+  width: 25px;
+  height: 16px;
+  background-image: url(../images/icon/ic_display.svg);
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+.edit .medals .honor_item .gray{
+  display: none;
+}
+.edit .medals .honor_item.disable .eye{
+  background-image: url(../images/icon/ic_hide.svg);
+}
+.edit .medals .honor_item.disable .gray{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 240, 240,.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1000px){
+  .edit.honor_main {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 500px;
+  }
+  .edit .edit_btn_area{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding-top: 20px;
+    z-index: 25;
+  }
+  .save, .cancel{
+    margin: 0 15px 0 15px;
+  }
+  .edit .special_area{
+    position: fixed;
+    top: 0;
+    padding: 30px;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+  }
+  .edit.honor_main .special{
+    display: flex;
+  }
+  .edit.honor_main .special .honor_item{
+    width: 31%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .edit.honor_main .special .honor_item img{
+    max-width: 100%;
+  }
+  .edit .special .text_area{
+    display: none;
+  }
+  .edit .medals_area{
+    padding-top: 185px;
+  }
+  .edit .medals .honor_item{
+    margin: 20px 1.5%;
+  }
+  .edit.honor_main .honor_item{
+    margin-bottom: 0;
+  }
+  .edit.honor_main .special .addItem{
+    font-size: 13px;
+  }
+}
+
+/* 分享頁面 */
+.kv_honorlist_share h2{
+  color: #fff;
+  padding-top: 75px;
+  position: relative;
+}
+.kv_honorlist_share h2:before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 110px;
+  background-image: url(../images/svg/laurel_L.svg);
+  background-repeat: no-repeat;
+  top: 60px;
+  left: calc(50% - 170px);
+}
+.kv_honorlist_share h2:after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 110px;
+  background-image: url(../images/svg/laurel_R.svg);
+  background-repeat: no-repeat;
+  top: 60px;
+  right: calc(50% - 160px);
+}
+.main_honor_share{
+  width: 940px;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: -300px;
+  padding-bottom: 100px;
+}
+.share_head{
+  background-color: #f3e939;
+  border-radius: 20px 20px 0 0;
+  padding: 40px 60px 20px 60px;
+  position: relative;
+}
+.share_head .info_area{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.share_head .photo{
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 40px;
+  width: 185px;
+  height: 185px;
+}
+.share_head .name{
+  color: #01aa4f;
+  font-size: 35px;
+  letter-spacing: 3.5px;
+  margin-bottom: 10px;
+}
+.share_head .title{
+  font-size: 22px;
+  letter-spacing: 2.2px;
+}
+.main_honor_share .list .item{
+  width: 175px;
+  /* height: 30px; */
+  /* line-height: 30px; */
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 10px 0;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  position: relative;
+  box-sizing: border-box;
+}
+.main_honor_share.share_edit .list .item{
+  border: dashed 1px rgba(0,0,0,.3);
+  padding-left: 10px;
+}
+.main_honor_share .list .item .btn{
+  display: none;
+}
+.main_honor_share.share_edit .list .item .btn{
+  display: block;
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  filter: grayscale(0);
+  transition: .2s;
+  transform-origin: 10px 10px;
+}
+.main_honor_share .list .item.hide{
+  display: none;
+}
+.main_honor_share.share_edit .list .item.hide{
+  /* color: rgba(51, 51, 51, 0.2);
+  border: dashed 1px rgba(51, 51, 51, 0.2); */
+  display: block;
+  opacity: .5;
+}
+.main_honor_share .list .item.hide .btn{
+  transform: rotate(-45deg);
+  filter: grayscale(1);
+}
+.share_head .trophy{
+  position: absolute;
+  bottom: -4px;
+  right: 40px;
+}
+.share_body{
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 50px;
+}
+.prize_list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.share_body .prize{
+  display: flex;
+  width: 49%;
+  margin-bottom: 30px;
+}
+.prize .prize_img{
+  width: 185px;
+  height: 206px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(to top, #01aa4f, #fff43c);
+  border-image-slice: 0;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to top, #01aa4f, #fff43c);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+.prize_title{
+  font-size: 25px;
+  color: #01aa4f;
+  letter-spacing: 0.75px;
+}
+.prize .count{
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin: 0px 0 10px;
+  position: relative;
+}
+.prize .count .num{
+  color: #01aa4f;
+  font-size: 22px;
+  margin: 0 5px;
+}
+.prize .count:before{
+  content: '';
+  display: block;
+  width: 95px;
+  height: 1px;
+  background-color: #01aa4f;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.prize .list{
+  width: 205px;
+}
+.prize .list .item{
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin: 5px 0;
+  width: 205px;
+  padding-left: 25px;
+  padding-right: 35px;
+  box-sizing: border-box;
+}
+.main_honor_share.share_edit .prize .list .item{
+  padding-left: 25px;
+}
+.prize .list .item .crown{
+  width: 15px;
+  position: absolute;
+  left: 5px;
+  filter: grayscale(0);
+  transition: .2s
+}
+.main_honor_share .list .item.hide .crown{
+  filter: grayscale(1)
+}
+.share_body .share_btn_area{
+  display: none;
+  justify-content: center;
+  margin-top: 50px;
+}
+.share_edit .share_body .share_btn_area{
+  display: flex;
+}
+.share_body .share_btn_area .share_btn{
+  width: 170px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #01aa4f;
+  color: #fff;
+  margin: 0 12.5px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.share_body .share_btn.share_cancel{
+  background-color: #666;
+}
+.share_side{
+  position: absolute;
+  right: 0;
+  top: 500px;
+}
+.toShare_side{
+  position: fixed;
+  right: 0;
+  top: 400px;
+}
+.toShare{
+  width: 50px;
+  height: 150px;
+  border-radius: 20px 0 0 20px;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 25px 10px;
+  box-shadow: 0px 10px 24px 0 rgba(0, 0, 0, 0.3);
+}
+.toShare img{
+  width: 20px;
+}
+.share_side_btn{
+  width: 118px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.share_side_btn_edit,
+.share_side_btn_dl{
+  background-color: #f3e939;
+}
+.share_side_btn_edit.editting{
+  opacity: 0.7;
+}
+.share_side_btn_fb{
+  background-color: #4267b2;
+  color: #fff;
+}
+.share_side_btn_line{
+  background-color: #01b901;
+  color: #fff;
+}
+.share_side_btn img{
+  width: 25px;
+  margin-right: 5px;
+  position: relative;
+  top: 6px;
+}
+.share_side_qr{
+  width: 125px;
+  height: 150px;
+  border-radius: 10px 0 0 10px;
+  margin-top: 30px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 24px 0 rgba(0, 0, 0, 0.3);
+}
+.qr_text img{
+  width: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+@media screen and (max-width: 1280px){
+  .main_honor_share{
+    padding-bottom: 50px;
+  }
+  .share_side{
+    position: relative;
+    width: 350px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    top: auto;
+    padding-bottom: 50px;
+  }
+  .share_side_btn{
+    width: 40%;    
+    border-radius: 20px 20px;
+  }
+  .share_side_qr{
+    width: 42%;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: none;
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+  }
+  .share_side_qr img{
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px){
+  .main_honor_share{
+    width: 350px;
+    padding-bottom: 30px;
+  }
+  .share_head{
+    padding: 100px 25px 20px 25px;
+    text-align: center;
+    position: relative;
+  }
+  .share_head .info_area{
+    display: block;
+  }
+  .share_head .photo{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    margin: auto;
+    top: -30px;
+    left: 0;
+    right: 0;
+    border: solid 5px #f3e939;
+  }
+  .share_head .name{
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .share_head .title{
+    font-size: 17px;
+  }
+  .main_honor_share .list .item{
+    width: 100%;
+    margin: 5px 0 0;
+    font-size: 15px;
+    padding-bottom: 0px;
+    padding-left: 0;
+  }
+  .main_honor_share.share_edit .list .item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .share_head .trophy{
+    display: none;
+  }
+  .prize_list{
+    display: block;
+  }
+  .share_body{
+    padding: 25px;
+  }
+  .share_body .prize{
+    width: 100%;
+  }
+  .prize .prize_img{
+    width: 110px;
+    height: 125px;
+  }
+  .prize .count:before{
+    width: 60px;
+  }
+  .prize .list{
+    width: 170px;
+  }
+  .prize .list .item{
+    width: 170px;
+    margin: 2px 0;
+    padding-right: 10px;
+    padding-left: 25px;
+  }
+  .share_edit .prize .list .item{
+    padding-right: 35px;
+  }
+}
+@media screen and (max-width: 768px){
+
+  .kv_page.kv_honorlist_share h2{
+    padding-top: 70px;
+    font-size: 40px;
+  }
+  .main_honor_share{
+    margin-top: -175px;
+  }
+  .kv_honorlist_share h2:before{
+    width: 50px;
+    height: 80px;
+    top: 55px;
+    left: calc(50% - 120px);
+  }
+  .kv_honorlist_share h2:after{
+    width: 50px;
+    height: 80px;
+    background-image: url(../images/svg/laurel_R.svg);
+    top: 55px;
+    right: calc(50% - 115px);
+  }
+}
+@media screen and (max-width: 500px){
+  .kv_honorlist_share {
+    background-image: url(../images/topKV_honorList_share_m.jpg);
+  }
+  .kv_page.kv_honorlist_share{
+    height: 240px;
+  }
+  .kv_page.kv_honorlist_share h2{
+    padding-top: 80px;
+    font-size: 40px;
+    width: auto;
+    height: auto;
+    position: relative;
+    background-color: transparent;
+  }
+  .kv_honorlist_share h2:before{
+    width: 50px;
+    height: 80px;
+    top: 60px;
+    left: calc(50% - 120px);
+  }
+  .kv_page.kv_honorlist_share h2:after{
+    width: 50px;
+    height: 80px;
+    background-image: url(../images/svg/laurel_R.svg);
+    left: auto;
+    top: 60px;
+    right: calc(50% - 115px);
+    border: none !important;
+  }
+  .main_honor_share {
+    margin-top: -100px;
+  }
+}

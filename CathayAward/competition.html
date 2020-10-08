@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/icon_font.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/competition.css">
+  <link rel="stylesheet" href="css/m_layout.css">  
+
+  <title>國泰獎勵平台</title>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="">
+    </a>
+    <div class="menuToggle">
+      <input type="checkbox">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <div class="mask"></div>
+      <div class="sidemenu">
+        <ul>
+          <li><span class="icon-ic_tree"></span><a href="index.html">首頁</a></li>
+          <li><span class="icon-ic_man"></span><a href="blueprint.html">獎勵藍圖</a></li>
+          <li><span class="icon-ic_news"></span><a href="competition.html">競賽活動</a></li>
+          <li><span class="icon-ic_badge"></span><a href="honorlist.html">榮譽榜</a></li>
+          <li><span class="icon-ic_diamond"></span><a href="">百寶箱</a></li>
+          <li><span class="icon-ic_crown"></span><a href="hof_single.html">名人堂</a></li>
+          <li><span class="icon-ic_gloves"></span><a href="">國泰競技場</a></li>
+        </ul>
+        <!-- <div class="sidemenu_footer">
+          <a href="#"><span class="icon-ic_fb"></span>國泰人壽官網</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="clear"></div>
+  </header>
+  <div class="wrapper">
+    <div class="kv_page kv_competition">
+      <h2>競賽活動</h2>
+    </div>
+    <div class="main_competition" style="padding-top:100px"><!-- 把最新消息移回來時要把style="padding-top:100px"刪除 -->
+      <!-- <div class="news">
+        <div class="news_head">
+          <h3>最新消息</h3>
+          <img src="images/trophy.png" alt="" class="trophy">
+        </div>
+        <div class="news_body">
+          <ul>
+            <li><a href="javascript:;">
+              <span class="date">19/11/02</span>
+              <span>績優出國戰況激烈，您目前排名1503名! 再接再厲～</span> 
+            </a></li>
+            <li><a href="javascript:;">
+              <span class="date">19/11/02</span>
+              <span>績優出國戰況激烈，您目前排名1503名! 再接再厲～</span> 
+            </a></li>
+            <li><a href="javascript:;">
+              <span class="date">19/11/02</span>
+              <span>績優出國戰況激烈，您目前排名1503名! 再接再厲～</span> 
+            </a></li>
+            <li><a href="javascript:;">
+              <span class="date">19/11/02</span>
+              <span>績優出國戰況激烈，您目前排名1503名! 再接再厲～</span> 
+            </a></li>
+            <li><a href="javascript:;">
+              <span class="date">19/11/02</span>
+              <span>績優出國戰況激烈，您目前排名1503名! 再接再厲～</span> 
+            </a></li>
+          </ul>
+          <p class="more"><a href="javascript:;">MORE ></a></p>
+        </div>
+      </div> -->
+      <div class="btnAll_area">
+        <a href="javascript:;" class="all allOpen">全部展開</a>
+        <a href="javascript:;" class="all allClose">全部收合</a>
+      </div>
+      <div class="competition_item wow fadeInUp">
+        <!-- 內容過多導致被截掉的話調整CSS .competition_item.active .competition_item_body的max-height -->
+        <div class="competition_item_close">
+          <span class="icon-ic_close"></span>
+        </div>
+        <div class="competition_item_head">
+          <div class="competition_title">
+            <div class="competition_title_icon">
+              <img src="images/symbol.png" alt="">
+            </div>
+            <div class="competition_title_text">
+              <h3>年度大賞</h3>
+              <p><span class="line"></span>排名制</p>
+            </div>
+            <div class="uncompleted">
+              <img src="images/svg/uncompleted.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="competition_item_body">
+          <div class="competition_tab">
+            <ul> <!--組別至多5組，組別名稱至多4個字，5個字就會破版-->
+              <li class="active">個人組</li>
+              <li>區處組</li>
+              <li>經課組</li>
+              <li>組別四</li>
+              <li>組別五</li>
+            </ul>
+          </div>
+          <div class="statusBar">
+            <ul>
+              <li>
+                <img src="images/svg/title_status.svg" alt="">
+                未達標
+              </li>
+              <li>
+                <img src="images/svg/title_ranking.svg" alt="">
+                60<span>名</span>
+              </li>
+            </ul>
+            <a href="#" class="dl">
+              <span class="icon-ic_dw"></span>活動辦法下載
+            </a>
+          </div>
+          <div class="data_area">
+            <div class="chart_col_4">
+              <div class="chart_title">繼續率</div>
+              <div class="chart_area">
+                <div class="chart_item">
+                  <div class="chart" id="0" data-value="100"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">100%</div>
+                    <p class="achieve">達標!</p>
+                  </div>
+                  <div class="chart_name">13th繼續率</div>
+                </div>
+                <div class="chart_item unachieved">
+                  <div class="chart" id="1" data-value="55"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">55%</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">25th繼續率</div>
+                </div>
+                <div class="chart_item unachieved">
+                  <div class="chart" id="2" data-value="85"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">85%</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">16th繼續率</div>
+                </div>
+                <div class="chart_item"></div>
+              </div>
+            </div>
+            <div class="chart_col_2">
+              <div class="chart_title">
+                一般組
+                <div class="ranking">
+                  <span class="icon-ic_flag"></span>34名
+                </div>                
+              </div>
+              <div class="chart_area">
+                <div class="chart_item unachieved">
+                  <div class="chart" id="3" data-value="33"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">245P</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">業績FYP</div>
+                </div>
+                <div class="chart_item unachieved">
+                  <div class="chart" id="4" data-value="66"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">102P</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">保障型業績</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart_col_2">
+              <div class="chart_title">
+                創新紀錄
+                <div class="ranking">
+                  <span class="icon-ic_flag"></span>101名
+                </div>               
+              </div>
+              <div class="chart_area">
+                <div class="chart_item">
+                  <div class="chart" id="5" data-value="100"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">13次</div>
+                    <p class="achieve">達標!</p>
+                  </div>
+                  <div class="chart_name">年度創新次數</div>
+                </div>
+                <div class="chart_item"></div>
+              </div>
+            </div>
+            <div class="chart_col_4">
+              <div class="chart_title">業績</div>
+              <div class="progressbar_area">
+                <div class="progressbar_name">業績</div>
+                <!-- 進度條 區間在js內設訂-->
+                <div class="progressbar" id="pb1" data-max="1520" data-current="1200"></div>
+                <!--  -->
+              </div>
+              <div class="progressbar_area">
+                <div class="progressbar_name">FYC</div>
+                <!-- 進度條 區間在html內設訂-->
+                <div class="progressbar" id="pb2" data-max="1920" data-current="1205">
+                  <!-- <div class="progressbar_bg"></div> -->
+                  <!-- <div class="progressbar_pr"></div> -->
+                  <!-- <div class="current"></div> -->
+                  <ul class="range">
+                    <li data-range="320">一般會員<br>320</li>
+                    <li data-range="960">超級會員<br>960</li>
+                    <li data-range="1920">頂尖會員<br>1920</li>
+                  </ul>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="competition_item wow fadeInUp">
+        <div class="competition_item_close">
+          <span class="icon-ic_close"></span>
+        </div>
+        <div class="competition_item_head">
+          <div class="competition_title">
+            <div class="competition_title_icon">
+              <img src="images/symbol.png" alt="">
+            </div>
+            <div class="competition_title_text">
+              <h3>年度大賞</h3>
+              <p><span class="line"></span>排名制</p>
+            </div>
+            <div class="uncompleted">
+              <img src="images/svg/uncompleted.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="competition_item_body">
+          <div class="competition_tab">
+            <ul>
+              <li class="active">個人組</li>
+              <li>區處組</li>
+              <li>經課組</li>
+            </ul>
+          </div>
+          <div class="statusBar">
+            <ul>
+              <li>
+                <img src="images/svg/title_status.svg" alt="">
+                未達標
+              </li>
+              <li>
+                <img src="images/svg/title_ranking.svg" alt="">
+                60<span>名</span>
+              </li>
+            </ul>
+            <a href="#" class="dl">
+              <span class="icon-ic_dw"></span>活動辦法下載
+            </a>
+          </div>
+          <div class="data_area">
+            <div class="chart_col_4">
+              <div class="chart_title">繼續率</div>
+              <div class="chart_area">
+                <div class="chart_item">
+                  <div class="chart" id="0" data-value="100"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">100%</div>
+                    <p class="achieve">達標!</p>
+                  </div>
+                  <div class="chart_name">13th繼續率</div>
+                </div>
+                <div class="chart_item unachieved">
+                  <div class="chart" id="1" data-value="55"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">55%</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">25th繼續率</div>
+                </div>
+                <div class="chart_item unachieved">
+                  <div class="chart" id="2" data-value="85"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">85%</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">16th繼續率</div>
+                </div>
+                <div class="chart_item"></div>
+              </div>
+            </div>
+            <div class="chart_col_2">
+              <div class="chart_title">
+                一般組
+                <div class="ranking">
+                  <span class="icon-ic_flag"></span>34名
+                </div>                
+              </div>
+              <div class="chart_area">
+                <div class="chart_item unachieved">
+                  <div class="chart" id="3" data-value="33"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">245P</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">業績FYP</div>
+                </div>
+                <div class="chart_item unachieved">
+                  <div class="chart" id="4" data-value="66"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">102P</div>
+                    <p>未達標</p>
+                  </div>
+                  <div class="chart_name">保障型業績</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart_col_2">
+              <div class="chart_title">
+                創新紀錄
+                <div class="ranking">
+                  <span class="icon-ic_flag"></span>101名
+                </div>               
+              </div>
+              <div class="chart_area">
+                <div class="chart_item">
+                  <div class="chart" id="5" data-value="100"></div>
+                  <div class="chart_text">
+                    <div class="chart_val">13次</div>
+                    <p class="achieve">達標!</p>
+                  </div>
+                  <div class="chart_name">年度創新次數</div>
+                </div>
+                <div class="chart_item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 最新消息pop up -->
+  <!-- <div class="green_mask">
+    <div class="closeGreen">
+      <span class="icon-ic_arrowL_b"></span>返回
+    </div>
+    <div class="board_title">
+      獎勵訊息公布欄
+    </div>
+    <div class="board">
+      <div class="board_tabs">
+        <ul>
+          <li class="active"><a href="javascript:;">全部訊息</a></li>
+          <li><a href="javascript:;">活動訊息</a></li>
+          <li><a href="javascript:;">成績公告</a></li>
+        </ul>
+      </div>
+      <div class="board_list">
+        <div class="board_item">
+          <div class="board_item_head">
+            108年5公專招FFC受訓通知
+            <div class="department">
+              <span class="icon-ic_dia"></span>業務部
+            </div>
+          </div>
+          <div class="board_item_body">
+            <p class="date">2019/04/10  14:50:08</p>
+            <p class="content">致 各位主管及同仁10803工學生業專活動積點獎學金(申覆前)如附件，請各位同仁參閱。如有疑義，請務必於04/10(三)17:00前以簡覆表方式提出申覆，謝謝!!!</p>
+            <p class="link">
+              <span class="icon-ic_paperclip"></span>
+              <a href="#">10803學生業專活動積點獎學金_申覆前.xlsx</a>
+              <a href="" class="more">
+                <span class="icon-ic_link"></span>了解更多
+              </a>
+              <div class="clear"></div>
+            </p>
+          </div>
+        </div>
+        <div class="board_item">
+          <div class="board_item_head">
+            108年5公專招FFC受訓通知
+            <div class="department">
+              <span class="icon-ic_dia"></span>業務部
+            </div>
+          </div>
+          <div class="board_item_body">
+            <p class="date">2019/04/10  14:50:08</p>
+            <p class="content">致 各位主管及同仁10803工學生業專活動積點獎學金(申覆前)如附件，請各位同仁參閱。如有疑義，請務必於04/10(三)17:00前以簡覆表方式提出申覆，謝謝!!!</p>
+            <p class="link">
+              <span class="icon-ic_paperclip"></span>
+              <a href="#">10803學生業專活動積點獎學金_申覆前.xlsx</a>
+              <a href="" class="more">
+                <span class="icon-ic_link"></span>了解更多
+              </a>
+              <div class="clear"></div>
+            </p>
+          </div>
+        </div>
+        <div class="board_item">
+          <div class="board_item_head">
+            108年5公專招FFC受訓通知
+            <div class="department">
+              <span class="icon-ic_dia"></span>業務部
+            </div>
+          </div>
+          <div class="board_item_body">
+            <p class="date">2019/04/10  14:50:08</p>
+            <p class="content">致 各位主管及同仁10803工學生業專活動積點獎學金(申覆前)如附件，請各位同仁參閱。如有疑義，請務必於04/10(三)17:00前以簡覆表方式提出申覆，謝謝!!!</p>
+            <p class="link">
+              <span class="icon-ic_paperclip"></span>
+              <a href="#">10803學生業專活動積點獎學金_申覆前.xlsx</a>
+              <a href="" class="more">
+                <span class="icon-ic_link"></span>了解更多
+              </a>
+              <div class="clear"></div>
+            </p>
+          </div>
+        </div>
+        <div class="board_item">
+          <div class="board_item_head">
+            108年5公專招FFC受訓通知
+            <div class="department">
+              <span class="icon-ic_dia"></span>業務部
+            </div>
+          </div>
+          <div class="board_item_body">
+            <p class="date">2019/04/10  14:50:08</p>
+            <p class="content">致 各位主管及同仁10803工學生業專活動積點獎學金(申覆前)如附件，請各位同仁參閱。如有疑義，請務必於04/10(三)17:00前以簡覆表方式提出申覆，謝謝!!!</p>
+            <p class="link">
+              <span class="icon-ic_paperclip"></span>
+              <a href="#">10803學生業專活動積點獎學金_申覆前.xlsx</a>
+              <a href="" class="more">
+                <span class="icon-ic_link"></span>了解更多
+              </a>
+              <div class="clear"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="images/pic_fireballon.png" alt="" class="board_img ballon1">
+      <img src="images/pic_balloonL.png" alt="" class="board_img ballon2">
+      <img src="images/pic_balloonR.png" alt="" class="board_img ballon3">
+      <img src="images/pic_cloud.png" alt="" class="board_img cloud1">
+      <img src="images/pic_cloud.png" alt="" class="board_img cloud2">
+      <img src="images/pic_cloud.png" alt="" class="board_img cloud3">
+    </div>
+  </div> -->
+  <footer>
+    <p>©國泰人壽保險股份有限公司</p>
+    <img class="tent" src="images/gotop.png" alt="">
+    <a href="javascript:;" class="totop"><span class="icon-ic_arrowL_b"></span><br>TOP</a>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/circleChart.js"></script>
+  <script type="text/javascript" src="js/wow.js"></script>
+  <script type="text/javascript" src="js/all.js"></script>
+  <script>
+    //標籤切換
+    $('.competition_tab li').click(function(){
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active')
+    })
+
+    //獎項開合
+    $('.competition_item_close').click(function(){
+      if(!$(this).parent().hasClass('active')){
+        $(this).parent().addClass('active')
+      }else{
+        $(this).parent().removeClass('active')
+      }
+    })
+
+    $('.allOpen').click(function(){
+      $('.competition_item').addClass('active')
+    })
+    $('.allClose').click(function(){
+      $('.competition_item').removeClass('active')
+    })
+    
+
+    //圓餅圖設定
+    var width = $(document).width();
+    if(width > 500){
+      $(".chart").circleChart({
+        backgroundColor: "#ffffff",
+        color: "#01aa4f",
+        startAngle: 75,
+        size: 150,
+        widthRatio: 0.02
+      }); 
+    }else{
+      $(".chart").circleChart({
+        backgroundColor: "#ffffff",
+        color: "#01aa4f",
+        startAngle: 75,
+        size: 105,
+        widthRatio: 0.02
+      }); 
+    }
+
+    //橫條進度圖表
+    (function($){
+      $.fn.progressBar = function(options){
+        var settings = $.extend({
+          range: []
+        },options);
+
+        return this.each(function(){
+          let self = $(this);
+          let max = self.attr('data-max');//最大值
+          let current = self.attr('data-current');//目前值
+          self.append('<div class="progressbar_bg"></div>');//新增bar標籤
+          self.append('<div class="progressbar_pr"></div>');//新增進度標籤
+          self.append('<div class="current"></div>');//新增當前數字標籤
+          self.find('.current').text(current);//填入當前數字
+          let percentage = (current / max)*100;
+          let bar_width = self.find('.progressbar_bg').width();
+          let current_width = self.find('.current').width();
+          let current_pos = (bar_width*current/max)-current_width/2-20;
+          self.find('.progressbar_pr').css("width",percentage+"%")
+          self.find('.current').css("left",current_pos)
+          
+          let range_num = settings.range.length;
+          self.append('<ul class="range"></ul>');//建立區間html標籤
+          for (let i=0; i<range_num; i++){
+            let range_value = Object.keys(settings.range[i])//取得key的陣列
+            let range_name = Object.values(settings.range[i])//取得value的陣列
+            self.find('.range').append('<li data-range="'+range_value[0]+'">'+range_name[0]+'</li>')//新增區間
+          }
+          let range_count = self.find('.range li').length;//取得區間個數
+          for (let i=0; i<range_count; i++){
+            let range_val = self.find('.range li').eq(i).attr('data-range'); //取得區間值
+            let range_pos = bar_width*range_val/max; //區間位置
+            let range_per = (range_val/max)*100;
+            if(range_per > percentage){ //是否達標
+              self.find('.range li').eq(i).addClass('less')
+            }
+            if(width>1000){
+              self.find('.range li').eq(i).css("right",'555'-range_pos) //設定區間位置
+            }else{
+              self.find('.range li').eq(i).css("right",'585'-range_pos) //設定區間位置
+            }
+          }
+        })
+      }
+    })(jQuery)
+
+    //建立進度圖
+    $('#pb1').progressBar({
+      range: [  //{區間值:區間名}
+        {240: "240"},
+        {880: "880"},
+        {1200: "1200"},
+        {1520: "1520"},
+      ]
+    });
+
+    $('#pb2').progressBar();
+
+    // 公佈欄
+    var green_mask = $('.green_mask');
+    var wrapper = $('.wrapper');
+    var header = $('header');
+    $('.news_body li a').click(function(){
+      green_mask.addClass('openGreen')
+      scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
+      // $('html, body').animate({scrollTop:0}, 10);
+      wrapper.addClass('blur')
+      header.addClass('blur')
+    })
+    $('.news_body .more a').click(function(){
+      green_mask.addClass('openGreen')
+      scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
+      $('html, body').animate({scrollTop:0}, 10);
+      wrapper.addClass('blur')
+      header.addClass('blur')
+    })
+    $('.closeGreen').click(function(){
+      green_mask.removeClass('openGreen')
+      wrapper.removeClass('blur')
+      header.removeClass('blur')
+    })    
+    $('.board_tabs li').click(function(){
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active')
+    })
+    
+
+  </script>
+</body>
+</html>

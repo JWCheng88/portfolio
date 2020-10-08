@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* To center everything */
+body { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* To center content in the containers */
+.dropzone { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*fixes dragging causing item to be .5* the size*/
+  flex-wrap: wrap; 
+}
+
+/* Resets */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+}
+
+html {
+  background-color: #618bff;
+}
+
+.wrapper { 
+  margin-bottom: 1em; 
+}
+
+/* Creating the dropzone boxes */
+.dropzone {
+  padding: 1em;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: white;
+}
+
+/* Creating the dragable boxes */
+.draggable {
+  
+  border-radius: 8px;
+  background-color: #ff8fde;
+  height: 80px;
+  width: 80px;
+}
+
+/* Occupied dropzone color */
+.draggable-dropzone--occupied {
+  background-color: #7bed9f;
+}
+
+/* Fix for color changing on container of the image */
+.occupied {
+  background-color: white !important;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="dropzone occupied" data-dropzone="1">
+            <div class="draggable"></div>
+        </div>
+        <div class="dropzone occupied" data-dropzone="2">
+            <div class="draggable"></div>
+        </div>
+        <div class="dropzone occupied" data-dropzone="3">
+            <div class="draggable"></div>
+        </div>
+    </div>
+        <div class="wrapper">
+        <div class="dropzone" data-dropzone="1"></div>
+        <div class="dropzone" data-dropzone="2"></div>
+        <div class="dropzone" data-dropzone="3"></div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
+<script>
+    const containers = document.querySelectorAll('.wrapper');
+
+const droppable = new Draggable.Droppable(containers, { //register dropzones as containers
+  draggable: '.draggable',
+  dropzone: '.dropzone',
+  mirror: {
+    constrainDimensions: true, //prevent element from shrinking while being dragged
+  },
+});
+
+let droppableOrigin;
+// --- Draggable events --- //
+droppable.on('drag:start', (evt) => {
+  //If drag then: 
+  droppableOrigin = evt.originalSource.parentNode.dataset.dropzone;
+});
+
+// droppable.on('drag:move', (evt) => {
+//   //If drag then: 
+//   droppableOrigin = evt.originalSource.parentNode.dataset.dropzone;
+//   document.body.style.backgroundColor = "red";
+// });
+
+droppable.on('droppable:dropped', (evt) => {
+  if (droppableOrigin !== evt.dropzone.dataset.dropzone) {
+    //if dropped into wrong container then: 
+    evt.cancel();
+  }
+});
+
+droppable.on('droppable:returned', (evt) => {
+  if (droppableOrigin !== evt.dropzone.dataset.dropzone) {
+    //if dropped into wrong container then: 
+    evt.cancel();
+    
+  }
+});
+</script>
+</html>
